@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.IOP.CodecPackage')
 
-call javaapi#class('FormatMismatch', '', [
+call javaapi#class('FormatMismatch', 'UserException', [
   \ javaapi#method(0,'FormatMismatch(', ')', 'public'),
   \ javaapi#method(0,'FormatMismatch(', 'String)', 'public'),
   \ ])
@@ -15,7 +15,7 @@ call javaapi#class('FormatMismatchHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, FormatMismatch)', 'void'),
   \ ])
 
-call javaapi#class('InvalidTypeForEncoding', '', [
+call javaapi#class('InvalidTypeForEncoding', 'UserException', [
   \ javaapi#method(0,'InvalidTypeForEncoding(', ')', 'public'),
   \ javaapi#method(0,'InvalidTypeForEncoding(', 'String)', 'public'),
   \ ])
@@ -30,7 +30,7 @@ call javaapi#class('InvalidTypeForEncodingHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, InvalidTypeForEncoding)', 'void'),
   \ ])
 
-call javaapi#class('TypeMismatch', '', [
+call javaapi#class('TypeMismatch', 'UserException', [
   \ javaapi#method(0,'TypeMismatch(', ')', 'public'),
   \ javaapi#method(0,'TypeMismatch(', 'String)', 'public'),
   \ ])

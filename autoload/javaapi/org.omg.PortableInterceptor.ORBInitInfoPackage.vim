@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.PortableInterceptor.ORBInitInfoPackage')
 
-call javaapi#class('DuplicateName', '', [
+call javaapi#class('DuplicateName', 'UserException', [
   \ javaapi#field(0,'name', 'String'),
   \ javaapi#method(0,'DuplicateName(', ')', 'public'),
   \ javaapi#method(0,'DuplicateName(', 'String)', 'public'),
@@ -17,7 +17,7 @@ call javaapi#class('DuplicateNameHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, DuplicateName)', 'void'),
   \ ])
 
-call javaapi#class('InvalidName', '', [
+call javaapi#class('InvalidName', 'UserException', [
   \ javaapi#method(0,'InvalidName(', ')', 'public'),
   \ javaapi#method(0,'InvalidName(', 'String)', 'public'),
   \ ])

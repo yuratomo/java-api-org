@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.DynamicAny.DynAnyFactoryPackage')
 
-call javaapi#class('InconsistentTypeCode', '', [
+call javaapi#class('InconsistentTypeCode', 'UserException', [
   \ javaapi#method(0,'InconsistentTypeCode(', ')', 'public'),
   \ javaapi#method(0,'InconsistentTypeCode(', 'String)', 'public'),
   \ ])

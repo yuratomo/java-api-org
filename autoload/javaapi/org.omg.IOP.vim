@@ -1,5 +1,42 @@
 call javaapi#namespace('org.omg.IOP')
 
+call javaapi#interface('CodeSets', '', [
+  \ javaapi#field(1,'value', 'int'),
+  \ ])
+
+call javaapi#interface('Codec', 'IDLEntity', [
+  \ ])
+
+call javaapi#interface('CodecFactory', 'IDLEntity', [
+  \ ])
+
+call javaapi#class('CodecFactoryHelper', '', [
+  \ javaapi#method(0,'CodecFactoryHelper(', ')', 'public'),
+  \ javaapi#method(1,'insert(', 'Any, CodecFactory)', 'void'),
+  \ javaapi#method(1,'extract(', 'Any)', 'CodecFactory'),
+  \ javaapi#method(1,'type(', ')', 'TypeCode'),
+  \ javaapi#method(1,'id(', ')', 'String'),
+  \ javaapi#method(1,'read(', 'InputStream)', 'CodecFactory'),
+  \ javaapi#method(1,'write(', 'OutputStream, CodecFactory)', 'void'),
+  \ javaapi#method(1,'narrow(', 'Object)', 'CodecFactory'),
+  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'CodecFactory'),
+  \ ])
+
+call javaapi#interface('CodecFactoryOperations', '', [
+  \ javaapi#method(0,'create_codec(', 'Encoding) throws UnknownEncoding', 'Codec'),
+  \ ])
+
+call javaapi#namespace('org.omg.IOP')
+
+call javaapi#interface('CodecOperations', '', [
+  \ javaapi#method(0,'encode(', 'Any) throws InvalidTypeForEncoding', 'byte[]'),
+  \ javaapi#method(0,'decode(', 'byte[]) throws FormatMismatch', 'Any'),
+  \ javaapi#method(0,'encode_value(', 'Any) throws InvalidTypeForEncoding', 'byte[]'),
+  \ javaapi#method(0,'decode_value(', 'byte[], TypeCode) throws FormatMismatch, TypeMismatch', 'Any'),
+  \ ])
+
+call javaapi#namespace('org.omg.IOP')
+
 call javaapi#class('ComponentIdHelper', '', [
   \ javaapi#method(0,'ComponentIdHelper(', ')', 'public'),
   \ javaapi#method(1,'insert(', 'Any, int)', 'void'),
@@ -226,40 +263,5 @@ call javaapi#class('TaggedProfileHolder', 'Streamable', [
 
 call javaapi#interface('TransactionService', '', [
   \ javaapi#field(1,'value', 'int'),
-  \ ])
-
-
-call javaapi#interface('CodecOperations', '', [
-  \ javaapi#method(0,'encode(', 'Any) throws InvalidTypeForEncoding', 'byte[]'),
-  \ javaapi#method(0,'decode(', 'byte[]) throws FormatMismatch', 'Any'),
-  \ javaapi#method(0,'encode_value(', 'Any) throws InvalidTypeForEncoding', 'byte[]'),
-  \ javaapi#method(0,'decode_value(', 'byte[], TypeCode) throws FormatMismatch, TypeMismatch', 'Any'),
-  \ ])
-
-
-call javaapi#interface('CodeSets', '', [
-  \ javaapi#field(1,'value', 'int'),
-  \ ])
-
-call javaapi#interface('Codec', '', [
-  \ ])
-
-call javaapi#interface('CodecFactory', '', [
-  \ ])
-
-call javaapi#class('CodecFactoryHelper', '', [
-  \ javaapi#method(0,'CodecFactoryHelper(', ')', 'public'),
-  \ javaapi#method(1,'insert(', 'Any, CodecFactory)', 'void'),
-  \ javaapi#method(1,'extract(', 'Any)', 'CodecFactory'),
-  \ javaapi#method(1,'type(', ')', 'TypeCode'),
-  \ javaapi#method(1,'id(', ')', 'String'),
-  \ javaapi#method(1,'read(', 'InputStream)', 'CodecFactory'),
-  \ javaapi#method(1,'write(', 'OutputStream, CodecFactory)', 'void'),
-  \ javaapi#method(1,'narrow(', 'Object)', 'CodecFactory'),
-  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'CodecFactory'),
-  \ ])
-
-call javaapi#interface('CodecFactoryOperations', '', [
-  \ javaapi#method(0,'create_codec(', 'Encoding) throws UnknownEncoding', 'Codec'),
   \ ])
 

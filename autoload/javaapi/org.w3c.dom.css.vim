@@ -247,35 +247,35 @@ call javaapi#interface('CSS2Properties', '', [
   \ javaapi#method(0,'setZIndex(', 'String) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('CSSCharsetRule', '', [
+call javaapi#interface('CSSCharsetRule', 'CSSRule', [
   \ javaapi#method(0,'getEncoding(', ')', 'String'),
   \ javaapi#method(0,'setEncoding(', 'String) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('CSSFontFaceRule', '', [
+call javaapi#interface('CSSFontFaceRule', 'CSSRule', [
   \ javaapi#method(0,'getStyle(', ')', 'CSSStyleDeclaration'),
   \ ])
 
-call javaapi#interface('CSSImportRule', '', [
+call javaapi#interface('CSSImportRule', 'CSSRule', [
   \ javaapi#method(0,'getHref(', ')', 'String'),
   \ javaapi#method(0,'getMedia(', ')', 'MediaList'),
   \ javaapi#method(0,'getStyleSheet(', ')', 'CSSStyleSheet'),
   \ ])
 
-call javaapi#interface('CSSMediaRule', '', [
+call javaapi#interface('CSSMediaRule', 'CSSRule', [
   \ javaapi#method(0,'getMedia(', ')', 'MediaList'),
   \ javaapi#method(0,'getCssRules(', ')', 'CSSRuleList'),
   \ javaapi#method(0,'insertRule(', 'String, int) throws DOMException', 'int'),
   \ javaapi#method(0,'deleteRule(', 'int) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('CSSPageRule', '', [
+call javaapi#interface('CSSPageRule', 'CSSRule', [
   \ javaapi#method(0,'getSelectorText(', ')', 'String'),
   \ javaapi#method(0,'setSelectorText(', 'String) throws DOMException', 'void'),
   \ javaapi#method(0,'getStyle(', ')', 'CSSStyleDeclaration'),
   \ ])
 
-call javaapi#interface('CSSPrimitiveValue', '', [
+call javaapi#interface('CSSPrimitiveValue', 'CSSValue', [
   \ javaapi#field(1,'CSS_UNKNOWN', 'short'),
   \ javaapi#field(1,'CSS_NUMBER', 'short'),
   \ javaapi#field(1,'CSS_PERCENTAGE', 'short'),
@@ -345,20 +345,20 @@ call javaapi#interface('CSSStyleDeclaration', '', [
   \ javaapi#method(0,'getParentRule(', ')', 'CSSRule'),
   \ ])
 
-call javaapi#interface('CSSStyleRule', '', [
+call javaapi#interface('CSSStyleRule', 'CSSRule', [
   \ javaapi#method(0,'getSelectorText(', ')', 'String'),
   \ javaapi#method(0,'setSelectorText(', 'String) throws DOMException', 'void'),
   \ javaapi#method(0,'getStyle(', ')', 'CSSStyleDeclaration'),
   \ ])
 
-call javaapi#interface('CSSStyleSheet', '', [
+call javaapi#interface('CSSStyleSheet', 'StyleSheet', [
   \ javaapi#method(0,'getOwnerRule(', ')', 'CSSRule'),
   \ javaapi#method(0,'getCssRules(', ')', 'CSSRuleList'),
   \ javaapi#method(0,'insertRule(', 'String, int) throws DOMException', 'int'),
   \ javaapi#method(0,'deleteRule(', 'int) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('CSSUnknownRule', '', [
+call javaapi#interface('CSSUnknownRule', 'CSSRule', [
   \ ])
 
 call javaapi#interface('CSSValue', '', [
@@ -371,7 +371,7 @@ call javaapi#interface('CSSValue', '', [
   \ javaapi#method(0,'getCssValueType(', ')', 'short'),
   \ ])
 
-call javaapi#interface('CSSValueList', '', [
+call javaapi#interface('CSSValueList', 'CSSValue', [
   \ javaapi#method(0,'getLength(', ')', 'int'),
   \ javaapi#method(0,'item(', 'int)', 'CSSValue'),
   \ ])
@@ -382,11 +382,11 @@ call javaapi#interface('Counter', '', [
   \ javaapi#method(0,'getSeparator(', ')', 'String'),
   \ ])
 
-call javaapi#interface('DOMImplementationCSS', '', [
+call javaapi#interface('DOMImplementationCSS', 'DOMImplementation', [
   \ javaapi#method(0,'createCSSStyleSheet(', 'String, String) throws DOMException', 'CSSStyleSheet'),
   \ ])
 
-call javaapi#interface('DocumentCSS', '', [
+call javaapi#interface('DocumentCSS', 'DocumentStyle', [
   \ javaapi#method(0,'getOverrideStyle(', 'Element, String)', 'CSSStyleDeclaration'),
   \ ])
 
@@ -407,7 +407,7 @@ call javaapi#interface('Rect', '', [
   \ javaapi#method(0,'getLeft(', ')', 'CSSPrimitiveValue'),
   \ ])
 
-call javaapi#interface('ViewCSS', '', [
+call javaapi#interface('ViewCSS', 'AbstractView', [
   \ javaapi#method(0,'getComputedStyle(', 'Element, String)', 'CSSStyleDeclaration'),
   \ ])
 

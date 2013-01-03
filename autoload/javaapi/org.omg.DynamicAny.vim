@@ -1,5 +1,107 @@
 call javaapi#namespace('org.omg.DynamicAny')
 
+call javaapi#class('AnySeqHelper', '', [
+  \ javaapi#method(0,'AnySeqHelper(', ')', 'public'),
+  \ javaapi#method(1,'insert(', 'Any, Any[])', 'void'),
+  \ javaapi#method(1,'extract(', 'Any)', 'Any[]'),
+  \ javaapi#method(1,'type(', ')', 'TypeCode'),
+  \ javaapi#method(1,'id(', ')', 'String'),
+  \ javaapi#method(1,'read(', 'InputStream)', 'Any[]'),
+  \ javaapi#method(1,'write(', 'OutputStream, Any[])', 'void'),
+  \ ])
+
+call javaapi#interface('DynAny', 'IDLEntity', [
+  \ ])
+
+call javaapi#interface('DynAnyFactory', 'IDLEntity', [
+  \ ])
+
+call javaapi#class('DynAnyFactoryHelper', '', [
+  \ javaapi#method(0,'DynAnyFactoryHelper(', ')', 'public'),
+  \ javaapi#method(1,'insert(', 'Any, DynAnyFactory)', 'void'),
+  \ javaapi#method(1,'extract(', 'Any)', 'DynAnyFactory'),
+  \ javaapi#method(1,'type(', ')', 'TypeCode'),
+  \ javaapi#method(1,'id(', ')', 'String'),
+  \ javaapi#method(1,'read(', 'InputStream)', 'DynAnyFactory'),
+  \ javaapi#method(1,'write(', 'OutputStream, DynAnyFactory)', 'void'),
+  \ javaapi#method(1,'narrow(', 'Object)', 'DynAnyFactory'),
+  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynAnyFactory'),
+  \ ])
+
+call javaapi#interface('DynAnyFactoryOperations', '', [
+  \ javaapi#method(0,'create_dyn_any(', 'Any) throws InconsistentTypeCode', 'DynAny'),
+  \ javaapi#method(0,'create_dyn_any_from_type_code(', 'TypeCode) throws InconsistentTypeCode', 'DynAny'),
+  \ ])
+
+call javaapi#namespace('org.omg.DynamicAny')
+
+call javaapi#class('DynAnyHelper', '', [
+  \ javaapi#method(0,'DynAnyHelper(', ')', 'public'),
+  \ javaapi#method(1,'insert(', 'Any, DynAny)', 'void'),
+  \ javaapi#method(1,'extract(', 'Any)', 'DynAny'),
+  \ javaapi#method(1,'type(', ')', 'TypeCode'),
+  \ javaapi#method(1,'id(', ')', 'String'),
+  \ javaapi#method(1,'read(', 'InputStream)', 'DynAny'),
+  \ javaapi#method(1,'write(', 'OutputStream, DynAny)', 'void'),
+  \ javaapi#method(1,'narrow(', 'Object)', 'DynAny'),
+  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynAny'),
+  \ ])
+
+call javaapi#interface('DynAnyOperations', '', [
+  \ javaapi#method(0,'type(', ')', 'TypeCode'),
+  \ javaapi#method(0,'assign(', 'DynAny) throws TypeMismatch', 'void'),
+  \ javaapi#method(0,'from_any(', 'Any) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'to_any(', ')', 'Any'),
+  \ javaapi#method(0,'equal(', 'DynAny)', 'boolean'),
+  \ javaapi#method(0,'destroy(', ')', 'void'),
+  \ javaapi#method(0,'copy(', ')', 'DynAny'),
+  \ javaapi#method(0,'insert_boolean(', 'boolean) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_octet(', 'byte) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_char(', 'char) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_short(', 'short) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_ushort(', 'short) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_long(', 'int) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_ulong(', 'int) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_float(', 'float) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_double(', 'double) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_string(', 'String) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_reference(', 'Object) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_typecode(', 'TypeCode) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_longlong(', 'long) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_ulonglong(', 'long) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_wchar(', 'char) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_wstring(', 'String) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_any(', 'Any) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_dyn_any(', 'DynAny) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'insert_val(', 'Serializable) throws TypeMismatch, InvalidValue', 'void'),
+  \ javaapi#method(0,'get_boolean(', ') throws TypeMismatch, InvalidValue', 'boolean'),
+  \ javaapi#method(0,'get_octet(', ') throws TypeMismatch, InvalidValue', 'byte'),
+  \ javaapi#method(0,'get_char(', ') throws TypeMismatch, InvalidValue', 'char'),
+  \ javaapi#method(0,'get_short(', ') throws TypeMismatch, InvalidValue', 'short'),
+  \ javaapi#method(0,'get_ushort(', ') throws TypeMismatch, InvalidValue', 'short'),
+  \ javaapi#method(0,'get_long(', ') throws TypeMismatch, InvalidValue', 'int'),
+  \ javaapi#method(0,'get_ulong(', ') throws TypeMismatch, InvalidValue', 'int'),
+  \ javaapi#method(0,'get_float(', ') throws TypeMismatch, InvalidValue', 'float'),
+  \ javaapi#method(0,'get_double(', ') throws TypeMismatch, InvalidValue', 'double'),
+  \ javaapi#method(0,'get_string(', ') throws TypeMismatch, InvalidValue', 'String'),
+  \ javaapi#method(0,'get_reference(', ') throws TypeMismatch, InvalidValue', 'Object'),
+  \ javaapi#method(0,'get_typecode(', ') throws TypeMismatch, InvalidValue', 'TypeCode'),
+  \ javaapi#method(0,'get_longlong(', ') throws TypeMismatch, InvalidValue', 'long'),
+  \ javaapi#method(0,'get_ulonglong(', ') throws TypeMismatch, InvalidValue', 'long'),
+  \ javaapi#method(0,'get_wchar(', ') throws TypeMismatch, InvalidValue', 'char'),
+  \ javaapi#method(0,'get_wstring(', ') throws TypeMismatch, InvalidValue', 'String'),
+  \ javaapi#method(0,'get_any(', ') throws TypeMismatch, InvalidValue', 'Any'),
+  \ javaapi#method(0,'get_dyn_any(', ') throws TypeMismatch, InvalidValue', 'DynAny'),
+  \ javaapi#method(0,'get_val(', ') throws TypeMismatch, InvalidValue', 'Serializable'),
+  \ javaapi#method(0,'seek(', 'int)', 'boolean'),
+  \ javaapi#method(0,'rewind(', ')', 'void'),
+  \ javaapi#method(0,'next(', ')', 'boolean'),
+  \ javaapi#method(0,'component_count(', ')', 'int'),
+  \ javaapi#method(0,'current_component(', ') throws TypeMismatch', 'DynAny'),
+  \ ])
+
+call javaapi#namespace('org.omg.DynamicAny')
+
 call javaapi#class('DynAnySeqHelper', '', [
   \ javaapi#method(0,'DynAnySeqHelper(', ')', 'public'),
   \ javaapi#method(1,'insert(', 'Any, DynAny[])', 'void'),
@@ -10,7 +112,7 @@ call javaapi#class('DynAnySeqHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, DynAny[])', 'void'),
   \ ])
 
-call javaapi#interface('DynArray', '', [
+call javaapi#interface('DynArray', 'IDLEntity', [
   \ ])
 
 call javaapi#class('DynArrayHelper', '', [
@@ -25,14 +127,14 @@ call javaapi#class('DynArrayHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynArray'),
   \ ])
 
-call javaapi#interface('DynArrayOperations', '', [
+call javaapi#interface('DynArrayOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'get_elements(', ')', 'Any[]'),
   \ javaapi#method(0,'set_elements(', 'Any[]) throws TypeMismatch, InvalidValue', 'void'),
   \ javaapi#method(0,'get_elements_as_dyn_any(', ')', 'DynAny[]'),
   \ javaapi#method(0,'set_elements_as_dyn_any(', 'DynAny[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
-call javaapi#interface('DynEnum', '', [
+call javaapi#interface('DynEnum', 'IDLEntity', [
   \ ])
 
 call javaapi#class('DynEnumHelper', '', [
@@ -47,14 +149,14 @@ call javaapi#class('DynEnumHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynEnum'),
   \ ])
 
-call javaapi#interface('DynEnumOperations', '', [
+call javaapi#interface('DynEnumOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'get_as_string(', ')', 'String'),
   \ javaapi#method(0,'set_as_string(', 'String) throws InvalidValue', 'void'),
   \ javaapi#method(0,'get_as_ulong(', ')', 'int'),
   \ javaapi#method(0,'set_as_ulong(', 'int) throws InvalidValue', 'void'),
   \ ])
 
-call javaapi#interface('DynFixed', '', [
+call javaapi#interface('DynFixed', 'IDLEntity', [
   \ ])
 
 call javaapi#class('DynFixedHelper', '', [
@@ -69,12 +171,12 @@ call javaapi#class('DynFixedHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynFixed'),
   \ ])
 
-call javaapi#interface('DynFixedOperations', '', [
+call javaapi#interface('DynFixedOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'get_value(', ')', 'String'),
   \ javaapi#method(0,'set_value(', 'String) throws TypeMismatch, InvalidValue', 'boolean'),
   \ ])
 
-call javaapi#interface('DynSequence', '', [
+call javaapi#interface('DynSequence', 'IDLEntity', [
   \ ])
 
 call javaapi#class('DynSequenceHelper', '', [
@@ -89,7 +191,7 @@ call javaapi#class('DynSequenceHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynSequence'),
   \ ])
 
-call javaapi#interface('DynSequenceOperations', '', [
+call javaapi#interface('DynSequenceOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'get_length(', ')', 'int'),
   \ javaapi#method(0,'set_length(', 'int) throws InvalidValue', 'void'),
   \ javaapi#method(0,'get_elements(', ')', 'Any[]'),
@@ -98,7 +200,7 @@ call javaapi#interface('DynSequenceOperations', '', [
   \ javaapi#method(0,'set_elements_as_dyn_any(', 'DynAny[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
-call javaapi#interface('DynStruct', '', [
+call javaapi#interface('DynStruct', 'IDLEntity', [
   \ ])
 
 call javaapi#class('DynStructHelper', '', [
@@ -113,7 +215,7 @@ call javaapi#class('DynStructHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynStruct'),
   \ ])
 
-call javaapi#interface('DynStructOperations', '', [
+call javaapi#interface('DynStructOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
   \ javaapi#method(0,'current_member_kind(', ') throws TypeMismatch, InvalidValue', 'TCKind'),
   \ javaapi#method(0,'get_members(', ')', 'NameValuePair[]'),
@@ -122,7 +224,7 @@ call javaapi#interface('DynStructOperations', '', [
   \ javaapi#method(0,'set_members_as_dyn_any(', 'NameDynAnyPair[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
-call javaapi#interface('DynUnion', '', [
+call javaapi#interface('DynUnion', 'IDLEntity', [
   \ ])
 
 call javaapi#class('DynUnionHelper', '', [
@@ -137,7 +239,7 @@ call javaapi#class('DynUnionHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynUnion'),
   \ ])
 
-call javaapi#interface('DynUnionOperations', '', [
+call javaapi#interface('DynUnionOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'get_discriminator(', ')', 'DynAny'),
   \ javaapi#method(0,'set_discriminator(', 'DynAny) throws TypeMismatch', 'void'),
   \ javaapi#method(0,'set_to_default_member(', ') throws TypeMismatch', 'void'),
@@ -149,23 +251,23 @@ call javaapi#interface('DynUnionOperations', '', [
   \ javaapi#method(0,'member_name(', ') throws InvalidValue', 'String'),
   \ ])
 
-call javaapi#interface('DynValue', '', [
+call javaapi#interface('DynValue', 'IDLEntity', [
   \ ])
 
-call javaapi#interface('DynValueBox', '', [
+call javaapi#interface('DynValueBox', 'IDLEntity', [
   \ ])
 
-call javaapi#interface('DynValueBoxOperations', '', [
+call javaapi#interface('DynValueBoxOperations', 'DynValueCommonOperations', [
   \ javaapi#method(0,'get_boxed_value(', ') throws InvalidValue', 'Any'),
   \ javaapi#method(0,'set_boxed_value(', 'Any) throws TypeMismatch', 'void'),
   \ javaapi#method(0,'get_boxed_value_as_dyn_any(', ') throws InvalidValue', 'DynAny'),
   \ javaapi#method(0,'set_boxed_value_as_dyn_any(', 'DynAny) throws TypeMismatch', 'void'),
   \ ])
 
-call javaapi#interface('DynValueCommon', '', [
+call javaapi#interface('DynValueCommon', 'IDLEntity', [
   \ ])
 
-call javaapi#interface('DynValueCommonOperations', '', [
+call javaapi#interface('DynValueCommonOperations', 'DynAnyOperations', [
   \ javaapi#method(0,'is_null(', ')', 'boolean'),
   \ javaapi#method(0,'set_to_null(', ')', 'void'),
   \ javaapi#method(0,'set_to_value(', ')', 'void'),
@@ -183,7 +285,7 @@ call javaapi#class('DynValueHelper', '', [
   \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynValue'),
   \ ])
 
-call javaapi#interface('DynValueOperations', '', [
+call javaapi#interface('DynValueOperations', 'DynValueCommonOperations', [
   \ javaapi#method(0,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
   \ javaapi#method(0,'current_member_kind(', ') throws TypeMismatch, InvalidValue', 'TCKind'),
   \ javaapi#method(0,'get_members(', ') throws InvalidValue', 'NameValuePair[]'),
@@ -256,7 +358,7 @@ call javaapi#class('NameValuePairSeqHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, NameValuePair[])', 'void'),
   \ ])
 
-call javaapi#class('_DynAnyFactoryStub', '', [
+call javaapi#class('_DynAnyFactoryStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynAnyFactoryStub(', ')', 'public'),
   \ javaapi#method(0,'create_dyn_any(', 'Any) throws InconsistentTypeCode', 'DynAny'),
@@ -264,7 +366,7 @@ call javaapi#class('_DynAnyFactoryStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynAnyStub', '', [
+call javaapi#class('_DynAnyStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynAnyStub(', ')', 'public'),
   \ javaapi#method(0,'type(', ')', 'TypeCode'),
@@ -320,7 +422,7 @@ call javaapi#class('_DynAnyStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynArrayStub', '', [
+call javaapi#class('_DynArrayStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynArrayStub(', ')', 'public'),
   \ javaapi#method(0,'get_elements(', ')', 'Any[]'),
@@ -380,7 +482,7 @@ call javaapi#class('_DynArrayStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynEnumStub', '', [
+call javaapi#class('_DynEnumStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynEnumStub(', ')', 'public'),
   \ javaapi#method(0,'get_as_string(', ')', 'String'),
@@ -440,7 +542,7 @@ call javaapi#class('_DynEnumStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynFixedStub', '', [
+call javaapi#class('_DynFixedStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynFixedStub(', ')', 'public'),
   \ javaapi#method(0,'get_value(', ')', 'String'),
@@ -498,7 +600,7 @@ call javaapi#class('_DynFixedStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynSequenceStub', '', [
+call javaapi#class('_DynSequenceStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynSequenceStub(', ')', 'public'),
   \ javaapi#method(0,'get_length(', ')', 'int'),
@@ -560,7 +662,7 @@ call javaapi#class('_DynSequenceStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynStructStub', '', [
+call javaapi#class('_DynStructStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynStructStub(', ')', 'public'),
   \ javaapi#method(0,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
@@ -622,7 +724,7 @@ call javaapi#class('_DynStructStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynUnionStub', '', [
+call javaapi#class('_DynUnionStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynUnionStub(', ')', 'public'),
   \ javaapi#method(0,'get_discriminator(', ')', 'DynAny'),
@@ -687,7 +789,7 @@ call javaapi#class('_DynUnionStub', '', [
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
-call javaapi#class('_DynValueStub', '', [
+call javaapi#class('_DynValueStub', 'ObjectImpl', [
   \ javaapi#field(1,'_opsClass', 'Class'),
   \ javaapi#method(0,'_DynValueStub(', ')', 'public'),
   \ javaapi#method(0,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
@@ -750,105 +852,5 @@ call javaapi#class('_DynValueStub', '', [
   \ javaapi#method(0,'component_count(', ')', 'int'),
   \ javaapi#method(0,'current_component(', ') throws TypeMismatch', 'DynAny'),
   \ javaapi#method(0,'_ids(', ')', 'String[]'),
-  \ ])
-
-
-call javaapi#class('DynAnyHelper', '', [
-  \ javaapi#method(0,'DynAnyHelper(', ')', 'public'),
-  \ javaapi#method(1,'insert(', 'Any, DynAny)', 'void'),
-  \ javaapi#method(1,'extract(', 'Any)', 'DynAny'),
-  \ javaapi#method(1,'type(', ')', 'TypeCode'),
-  \ javaapi#method(1,'id(', ')', 'String'),
-  \ javaapi#method(1,'read(', 'InputStream)', 'DynAny'),
-  \ javaapi#method(1,'write(', 'OutputStream, DynAny)', 'void'),
-  \ javaapi#method(1,'narrow(', 'Object)', 'DynAny'),
-  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynAny'),
-  \ ])
-
-call javaapi#interface('DynAnyOperations', '', [
-  \ javaapi#method(0,'type(', ')', 'TypeCode'),
-  \ javaapi#method(0,'assign(', 'DynAny) throws TypeMismatch', 'void'),
-  \ javaapi#method(0,'from_any(', 'Any) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'to_any(', ')', 'Any'),
-  \ javaapi#method(0,'equal(', 'DynAny)', 'boolean'),
-  \ javaapi#method(0,'destroy(', ')', 'void'),
-  \ javaapi#method(0,'copy(', ')', 'DynAny'),
-  \ javaapi#method(0,'insert_boolean(', 'boolean) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_octet(', 'byte) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_char(', 'char) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_short(', 'short) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_ushort(', 'short) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_long(', 'int) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_ulong(', 'int) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_float(', 'float) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_double(', 'double) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_string(', 'String) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_reference(', 'Object) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_typecode(', 'TypeCode) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_longlong(', 'long) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_ulonglong(', 'long) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_wchar(', 'char) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_wstring(', 'String) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_any(', 'Any) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_dyn_any(', 'DynAny) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'insert_val(', 'Serializable) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,'get_boolean(', ') throws TypeMismatch, InvalidValue', 'boolean'),
-  \ javaapi#method(0,'get_octet(', ') throws TypeMismatch, InvalidValue', 'byte'),
-  \ javaapi#method(0,'get_char(', ') throws TypeMismatch, InvalidValue', 'char'),
-  \ javaapi#method(0,'get_short(', ') throws TypeMismatch, InvalidValue', 'short'),
-  \ javaapi#method(0,'get_ushort(', ') throws TypeMismatch, InvalidValue', 'short'),
-  \ javaapi#method(0,'get_long(', ') throws TypeMismatch, InvalidValue', 'int'),
-  \ javaapi#method(0,'get_ulong(', ') throws TypeMismatch, InvalidValue', 'int'),
-  \ javaapi#method(0,'get_float(', ') throws TypeMismatch, InvalidValue', 'float'),
-  \ javaapi#method(0,'get_double(', ') throws TypeMismatch, InvalidValue', 'double'),
-  \ javaapi#method(0,'get_string(', ') throws TypeMismatch, InvalidValue', 'String'),
-  \ javaapi#method(0,'get_reference(', ') throws TypeMismatch, InvalidValue', 'Object'),
-  \ javaapi#method(0,'get_typecode(', ') throws TypeMismatch, InvalidValue', 'TypeCode'),
-  \ javaapi#method(0,'get_longlong(', ') throws TypeMismatch, InvalidValue', 'long'),
-  \ javaapi#method(0,'get_ulonglong(', ') throws TypeMismatch, InvalidValue', 'long'),
-  \ javaapi#method(0,'get_wchar(', ') throws TypeMismatch, InvalidValue', 'char'),
-  \ javaapi#method(0,'get_wstring(', ') throws TypeMismatch, InvalidValue', 'String'),
-  \ javaapi#method(0,'get_any(', ') throws TypeMismatch, InvalidValue', 'Any'),
-  \ javaapi#method(0,'get_dyn_any(', ') throws TypeMismatch, InvalidValue', 'DynAny'),
-  \ javaapi#method(0,'get_val(', ') throws TypeMismatch, InvalidValue', 'Serializable'),
-  \ javaapi#method(0,'seek(', 'int)', 'boolean'),
-  \ javaapi#method(0,'rewind(', ')', 'void'),
-  \ javaapi#method(0,'next(', ')', 'boolean'),
-  \ javaapi#method(0,'component_count(', ')', 'int'),
-  \ javaapi#method(0,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ ])
-
-
-call javaapi#class('AnySeqHelper', '', [
-  \ javaapi#method(0,'AnySeqHelper(', ')', 'public'),
-  \ javaapi#method(1,'insert(', 'Any, Any[])', 'void'),
-  \ javaapi#method(1,'extract(', 'Any)', 'Any[]'),
-  \ javaapi#method(1,'type(', ')', 'TypeCode'),
-  \ javaapi#method(1,'id(', ')', 'String'),
-  \ javaapi#method(1,'read(', 'InputStream)', 'Any[]'),
-  \ javaapi#method(1,'write(', 'OutputStream, Any[])', 'void'),
-  \ ])
-
-call javaapi#interface('DynAny', '', [
-  \ ])
-
-call javaapi#interface('DynAnyFactory', '', [
-  \ ])
-
-call javaapi#class('DynAnyFactoryHelper', '', [
-  \ javaapi#method(0,'DynAnyFactoryHelper(', ')', 'public'),
-  \ javaapi#method(1,'insert(', 'Any, DynAnyFactory)', 'void'),
-  \ javaapi#method(1,'extract(', 'Any)', 'DynAnyFactory'),
-  \ javaapi#method(1,'type(', ')', 'TypeCode'),
-  \ javaapi#method(1,'id(', ')', 'String'),
-  \ javaapi#method(1,'read(', 'InputStream)', 'DynAnyFactory'),
-  \ javaapi#method(1,'write(', 'OutputStream, DynAnyFactory)', 'void'),
-  \ javaapi#method(1,'narrow(', 'Object)', 'DynAnyFactory'),
-  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'DynAnyFactory'),
-  \ ])
-
-call javaapi#interface('DynAnyFactoryOperations', '', [
-  \ javaapi#method(0,'create_dyn_any(', 'Any) throws InconsistentTypeCode', 'DynAny'),
-  \ javaapi#method(0,'create_dyn_any_from_type_code(', 'TypeCode) throws InconsistentTypeCode', 'DynAny'),
   \ ])
 

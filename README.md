@@ -1,4 +1,52 @@
-java-api-android
+java-api-org
 =============
 Define of java-api-complete.vim for org
 
+namespaces
+----------
+    org.ietf.jgss
+    org.jcp.xml.dsig.internal.dom
+    org.jcp.xml.dsig.internal
+    org.omg.CORBA.DynAnyPackage
+    org.omg.CORBA.ORBPackage
+    org.omg.CORBA.portable
+    org.omg.CORBA.TypeCodePackage
+    org.omg.CORBA
+    org.omg.CORBA_2_3.portable
+    org.omg.CORBA_2_3
+    org.omg.CosNaming.NamingContextExtPackage
+    org.omg.CosNaming.NamingContextPackage
+    org.omg.CosNaming
+    org.omg.Dynamic
+    org.omg.DynamicAny.DynAnyFactoryPackage
+    org.omg.DynamicAny.DynAnyPackage
+    org.omg.DynamicAny
+    org.omg.IOP.CodecFactoryPackage
+    org.omg.IOP.CodecPackage
+    org.omg.IOP
+    org.omg.Messaging
+    org.omg.PortableInterceptor.ORBInitInfoPackage
+    org.omg.PortableInterceptor
+    org.omg.PortableServer.CurrentPackage
+    org.omg.PortableServer.POAManagerPackage
+    org.omg.PortableServer.POAPackage
+    org.omg.PortableServer.portable
+    org.omg.PortableServer.ServantLocatorPackage
+    org.omg.PortableServer
+    org.omg.SendingContext
+    org.omg.stub.java.rmi
+    org.omg.stub.javax.management.remote.rmi
+    org.w3c.dom.bootstrap
+    org.w3c.dom.css
+    org.w3c.dom.events
+    org.w3c.dom.html
+    org.w3c.dom.ls
+    org.w3c.dom.ranges
+    org.w3c.dom.stylesheets
+    org.w3c.dom.traversal
+    org.w3c.dom.views
+    org.w3c.dom
+    org.w3c.dom.xpath
+    org.xml.sax.ext
+    org.xml.sax.helpers
+    org.xml.sax

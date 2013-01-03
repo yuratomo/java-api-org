@@ -1,6 +1,6 @@
 call javaapi#namespace('org.w3c.dom.html')
 
-call javaapi#interface('HTMLAnchorElement', '', [
+call javaapi#interface('HTMLAnchorElement', 'HTMLElement', [
   \ javaapi#method(0,'getAccessKey(', ')', 'String'),
   \ javaapi#method(0,'setAccessKey(', 'String)', 'void'),
   \ javaapi#method(0,'getCharset(', ')', 'String'),
@@ -29,7 +29,7 @@ call javaapi#interface('HTMLAnchorElement', '', [
   \ javaapi#method(0,'focus(', ')', 'void'),
   \ ])
 
-call javaapi#interface('HTMLAppletElement', '', [
+call javaapi#interface('HTMLAppletElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ javaapi#method(0,'getAlt(', ')', 'String'),
@@ -54,7 +54,7 @@ call javaapi#interface('HTMLAppletElement', '', [
   \ javaapi#method(0,'setWidth(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLAreaElement', '', [
+call javaapi#interface('HTMLAreaElement', 'HTMLElement', [
   \ javaapi#method(0,'getAccessKey(', ')', 'String'),
   \ javaapi#method(0,'setAccessKey(', 'String)', 'void'),
   \ javaapi#method(0,'getAlt(', ')', 'String'),
@@ -73,19 +73,19 @@ call javaapi#interface('HTMLAreaElement', '', [
   \ javaapi#method(0,'setTarget(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLBRElement', '', [
+call javaapi#interface('HTMLBRElement', 'HTMLElement', [
   \ javaapi#method(0,'getClear(', ')', 'String'),
   \ javaapi#method(0,'setClear(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLBaseElement', '', [
+call javaapi#interface('HTMLBaseElement', 'HTMLElement', [
   \ javaapi#method(0,'getHref(', ')', 'String'),
   \ javaapi#method(0,'setHref(', 'String)', 'void'),
   \ javaapi#method(0,'getTarget(', ')', 'String'),
   \ javaapi#method(0,'setTarget(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLBaseFontElement', '', [
+call javaapi#interface('HTMLBaseFontElement', 'HTMLElement', [
   \ javaapi#method(0,'getColor(', ')', 'String'),
   \ javaapi#method(0,'setColor(', 'String)', 'void'),
   \ javaapi#method(0,'getFace(', ')', 'String'),
@@ -94,7 +94,7 @@ call javaapi#interface('HTMLBaseFontElement', '', [
   \ javaapi#method(0,'setSize(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLBodyElement', '', [
+call javaapi#interface('HTMLBodyElement', 'HTMLElement', [
   \ javaapi#method(0,'getALink(', ')', 'String'),
   \ javaapi#method(0,'setALink(', 'String)', 'void'),
   \ javaapi#method(0,'getBackground(', ')', 'String'),
@@ -109,7 +109,7 @@ call javaapi#interface('HTMLBodyElement', '', [
   \ javaapi#method(0,'setVLink(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLButtonElement', '', [
+call javaapi#interface('HTMLButtonElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ javaapi#method(0,'getAccessKey(', ')', 'String'),
   \ javaapi#method(0,'setAccessKey(', 'String)', 'void'),
@@ -130,26 +130,26 @@ call javaapi#interface('HTMLCollection', '', [
   \ javaapi#method(0,'namedItem(', 'String)', 'Node'),
   \ ])
 
-call javaapi#interface('HTMLDListElement', '', [
+call javaapi#interface('HTMLDListElement', 'HTMLElement', [
   \ javaapi#method(0,'getCompact(', ')', 'boolean'),
   \ javaapi#method(0,'setCompact(', 'boolean)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLDOMImplementation', '', [
+call javaapi#interface('HTMLDOMImplementation', 'DOMImplementation', [
   \ javaapi#method(0,'createHTMLDocument(', 'String)', 'HTMLDocument'),
   \ ])
 
-call javaapi#interface('HTMLDirectoryElement', '', [
+call javaapi#interface('HTMLDirectoryElement', 'HTMLElement', [
   \ javaapi#method(0,'getCompact(', ')', 'boolean'),
   \ javaapi#method(0,'setCompact(', 'boolean)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLDivElement', '', [
+call javaapi#interface('HTMLDivElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLDocument', '', [
+call javaapi#interface('HTMLDocument', 'Document', [
   \ javaapi#method(0,'getTitle(', ')', 'String'),
   \ javaapi#method(0,'setTitle(', 'String)', 'void'),
   \ javaapi#method(0,'getReferrer(', ')', 'String'),
@@ -171,7 +171,7 @@ call javaapi#interface('HTMLDocument', '', [
   \ javaapi#method(0,'getElementsByName(', 'String)', 'NodeList'),
   \ ])
 
-call javaapi#interface('HTMLElement', '', [
+call javaapi#interface('HTMLElement', 'Element', [
   \ javaapi#method(0,'getId(', ')', 'String'),
   \ javaapi#method(0,'setId(', 'String)', 'void'),
   \ javaapi#method(0,'getTitle(', ')', 'String'),
@@ -184,11 +184,11 @@ call javaapi#interface('HTMLElement', '', [
   \ javaapi#method(0,'setClassName(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLFieldSetElement', '', [
+call javaapi#interface('HTMLFieldSetElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ ])
 
-call javaapi#interface('HTMLFontElement', '', [
+call javaapi#interface('HTMLFontElement', 'HTMLElement', [
   \ javaapi#method(0,'getColor(', ')', 'String'),
   \ javaapi#method(0,'setColor(', 'String)', 'void'),
   \ javaapi#method(0,'getFace(', ')', 'String'),
@@ -197,7 +197,7 @@ call javaapi#interface('HTMLFontElement', '', [
   \ javaapi#method(0,'setSize(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLFormElement', '', [
+call javaapi#interface('HTMLFormElement', 'HTMLElement', [
   \ javaapi#method(0,'getElements(', ')', 'HTMLCollection'),
   \ javaapi#method(0,'getLength(', ')', 'int'),
   \ javaapi#method(0,'getName(', ')', 'String'),
@@ -216,7 +216,7 @@ call javaapi#interface('HTMLFormElement', '', [
   \ javaapi#method(0,'reset(', ')', 'void'),
   \ ])
 
-call javaapi#interface('HTMLFrameElement', '', [
+call javaapi#interface('HTMLFrameElement', 'HTMLElement', [
   \ javaapi#method(0,'getFrameBorder(', ')', 'String'),
   \ javaapi#method(0,'setFrameBorder(', 'String)', 'void'),
   \ javaapi#method(0,'getLongDesc(', ')', 'String'),
@@ -236,14 +236,14 @@ call javaapi#interface('HTMLFrameElement', '', [
   \ javaapi#method(0,'getContentDocument(', ')', 'Document'),
   \ ])
 
-call javaapi#interface('HTMLFrameSetElement', '', [
+call javaapi#interface('HTMLFrameSetElement', 'HTMLElement', [
   \ javaapi#method(0,'getCols(', ')', 'String'),
   \ javaapi#method(0,'setCols(', 'String)', 'void'),
   \ javaapi#method(0,'getRows(', ')', 'String'),
   \ javaapi#method(0,'setRows(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLHRElement', '', [
+call javaapi#interface('HTMLHRElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ javaapi#method(0,'getNoShade(', ')', 'boolean'),
@@ -254,22 +254,22 @@ call javaapi#interface('HTMLHRElement', '', [
   \ javaapi#method(0,'setWidth(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLHeadElement', '', [
+call javaapi#interface('HTMLHeadElement', 'HTMLElement', [
   \ javaapi#method(0,'getProfile(', ')', 'String'),
   \ javaapi#method(0,'setProfile(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLHeadingElement', '', [
+call javaapi#interface('HTMLHeadingElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLHtmlElement', '', [
+call javaapi#interface('HTMLHtmlElement', 'HTMLElement', [
   \ javaapi#method(0,'getVersion(', ')', 'String'),
   \ javaapi#method(0,'setVersion(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLIFrameElement', '', [
+call javaapi#interface('HTMLIFrameElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ javaapi#method(0,'getFrameBorder(', ')', 'String'),
@@ -293,7 +293,7 @@ call javaapi#interface('HTMLIFrameElement', '', [
   \ javaapi#method(0,'getContentDocument(', ')', 'Document'),
   \ ])
 
-call javaapi#interface('HTMLImageElement', '', [
+call javaapi#interface('HTMLImageElement', 'HTMLElement', [
   \ javaapi#method(0,'getLowSrc(', ')', 'String'),
   \ javaapi#method(0,'setLowSrc(', 'String)', 'void'),
   \ javaapi#method(0,'getName(', ')', 'String'),
@@ -322,7 +322,7 @@ call javaapi#interface('HTMLImageElement', '', [
   \ javaapi#method(0,'setWidth(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLInputElement', '', [
+call javaapi#interface('HTMLInputElement', 'HTMLElement', [
   \ javaapi#method(0,'getDefaultValue(', ')', 'String'),
   \ javaapi#method(0,'setDefaultValue(', 'String)', 'void'),
   \ javaapi#method(0,'getDefaultChecked(', ')', 'boolean'),
@@ -363,20 +363,20 @@ call javaapi#interface('HTMLInputElement', '', [
   \ javaapi#method(0,'click(', ')', 'void'),
   \ ])
 
-call javaapi#interface('HTMLIsIndexElement', '', [
+call javaapi#interface('HTMLIsIndexElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ javaapi#method(0,'getPrompt(', ')', 'String'),
   \ javaapi#method(0,'setPrompt(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLLIElement', '', [
+call javaapi#interface('HTMLLIElement', 'HTMLElement', [
   \ javaapi#method(0,'getType(', ')', 'String'),
   \ javaapi#method(0,'setType(', 'String)', 'void'),
   \ javaapi#method(0,'getValue(', ')', 'int'),
   \ javaapi#method(0,'setValue(', 'int)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLLabelElement', '', [
+call javaapi#interface('HTMLLabelElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ javaapi#method(0,'getAccessKey(', ')', 'String'),
   \ javaapi#method(0,'setAccessKey(', 'String)', 'void'),
@@ -384,7 +384,7 @@ call javaapi#interface('HTMLLabelElement', '', [
   \ javaapi#method(0,'setHtmlFor(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLLegendElement', '', [
+call javaapi#interface('HTMLLegendElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ javaapi#method(0,'getAccessKey(', ')', 'String'),
   \ javaapi#method(0,'setAccessKey(', 'String)', 'void'),
@@ -392,7 +392,7 @@ call javaapi#interface('HTMLLegendElement', '', [
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLLinkElement', '', [
+call javaapi#interface('HTMLLinkElement', 'HTMLElement', [
   \ javaapi#method(0,'getDisabled(', ')', 'boolean'),
   \ javaapi#method(0,'setDisabled(', 'boolean)', 'void'),
   \ javaapi#method(0,'getCharset(', ')', 'String'),
@@ -413,18 +413,18 @@ call javaapi#interface('HTMLLinkElement', '', [
   \ javaapi#method(0,'setType(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLMapElement', '', [
+call javaapi#interface('HTMLMapElement', 'HTMLElement', [
   \ javaapi#method(0,'getAreas(', ')', 'HTMLCollection'),
   \ javaapi#method(0,'getName(', ')', 'String'),
   \ javaapi#method(0,'setName(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLMenuElement', '', [
+call javaapi#interface('HTMLMenuElement', 'HTMLElement', [
   \ javaapi#method(0,'getCompact(', ')', 'boolean'),
   \ javaapi#method(0,'setCompact(', 'boolean)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLMetaElement', '', [
+call javaapi#interface('HTMLMetaElement', 'HTMLElement', [
   \ javaapi#method(0,'getContent(', ')', 'String'),
   \ javaapi#method(0,'setContent(', 'String)', 'void'),
   \ javaapi#method(0,'getHttpEquiv(', ')', 'String'),
@@ -435,14 +435,14 @@ call javaapi#interface('HTMLMetaElement', '', [
   \ javaapi#method(0,'setScheme(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLModElement', '', [
+call javaapi#interface('HTMLModElement', 'HTMLElement', [
   \ javaapi#method(0,'getCite(', ')', 'String'),
   \ javaapi#method(0,'setCite(', 'String)', 'void'),
   \ javaapi#method(0,'getDateTime(', ')', 'String'),
   \ javaapi#method(0,'setDateTime(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLOListElement', '', [
+call javaapi#interface('HTMLOListElement', 'HTMLElement', [
   \ javaapi#method(0,'getCompact(', ')', 'boolean'),
   \ javaapi#method(0,'setCompact(', 'boolean)', 'void'),
   \ javaapi#method(0,'getStart(', ')', 'int'),
@@ -451,7 +451,7 @@ call javaapi#interface('HTMLOListElement', '', [
   \ javaapi#method(0,'setType(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLObjectElement', '', [
+call javaapi#interface('HTMLObjectElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ javaapi#method(0,'getCode(', ')', 'String'),
   \ javaapi#method(0,'setCode(', 'String)', 'void'),
@@ -490,14 +490,14 @@ call javaapi#interface('HTMLObjectElement', '', [
   \ javaapi#method(0,'getContentDocument(', ')', 'Document'),
   \ ])
 
-call javaapi#interface('HTMLOptGroupElement', '', [
+call javaapi#interface('HTMLOptGroupElement', 'HTMLElement', [
   \ javaapi#method(0,'getDisabled(', ')', 'boolean'),
   \ javaapi#method(0,'setDisabled(', 'boolean)', 'void'),
   \ javaapi#method(0,'getLabel(', ')', 'String'),
   \ javaapi#method(0,'setLabel(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLOptionElement', '', [
+call javaapi#interface('HTMLOptionElement', 'HTMLElement', [
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
   \ javaapi#method(0,'getDefaultSelected(', ')', 'boolean'),
   \ javaapi#method(0,'setDefaultSelected(', 'boolean)', 'void'),
@@ -513,12 +513,12 @@ call javaapi#interface('HTMLOptionElement', '', [
   \ javaapi#method(0,'setValue(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLParagraphElement', '', [
+call javaapi#interface('HTMLParagraphElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLParamElement', '', [
+call javaapi#interface('HTMLParamElement', 'HTMLElement', [
   \ javaapi#method(0,'getName(', ')', 'String'),
   \ javaapi#method(0,'setName(', 'String)', 'void'),
   \ javaapi#method(0,'getType(', ')', 'String'),
@@ -529,17 +529,17 @@ call javaapi#interface('HTMLParamElement', '', [
   \ javaapi#method(0,'setValueType(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLPreElement', '', [
+call javaapi#interface('HTMLPreElement', 'HTMLElement', [
   \ javaapi#method(0,'getWidth(', ')', 'int'),
   \ javaapi#method(0,'setWidth(', 'int)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLQuoteElement', '', [
+call javaapi#interface('HTMLQuoteElement', 'HTMLElement', [
   \ javaapi#method(0,'getCite(', ')', 'String'),
   \ javaapi#method(0,'setCite(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLScriptElement', '', [
+call javaapi#interface('HTMLScriptElement', 'HTMLElement', [
   \ javaapi#method(0,'getText(', ')', 'String'),
   \ javaapi#method(0,'setText(', 'String)', 'void'),
   \ javaapi#method(0,'getHtmlFor(', ')', 'String'),
@@ -556,7 +556,7 @@ call javaapi#interface('HTMLScriptElement', '', [
   \ javaapi#method(0,'setType(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLSelectElement', '', [
+call javaapi#interface('HTMLSelectElement', 'HTMLElement', [
   \ javaapi#method(0,'getType(', ')', 'String'),
   \ javaapi#method(0,'getSelectedIndex(', ')', 'int'),
   \ javaapi#method(0,'setSelectedIndex(', 'int)', 'void'),
@@ -581,7 +581,7 @@ call javaapi#interface('HTMLSelectElement', '', [
   \ javaapi#method(0,'focus(', ')', 'void'),
   \ ])
 
-call javaapi#interface('HTMLStyleElement', '', [
+call javaapi#interface('HTMLStyleElement', 'HTMLElement', [
   \ javaapi#method(0,'getDisabled(', ')', 'boolean'),
   \ javaapi#method(0,'setDisabled(', 'boolean)', 'void'),
   \ javaapi#method(0,'getMedia(', ')', 'String'),
@@ -590,12 +590,12 @@ call javaapi#interface('HTMLStyleElement', '', [
   \ javaapi#method(0,'setType(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTableCaptionElement', '', [
+call javaapi#interface('HTMLTableCaptionElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTableCellElement', '', [
+call javaapi#interface('HTMLTableCellElement', 'HTMLElement', [
   \ javaapi#method(0,'getCellIndex(', ')', 'int'),
   \ javaapi#method(0,'getAbbr(', ')', 'String'),
   \ javaapi#method(0,'setAbbr(', 'String)', 'void'),
@@ -627,7 +627,7 @@ call javaapi#interface('HTMLTableCellElement', '', [
   \ javaapi#method(0,'setWidth(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTableColElement', '', [
+call javaapi#interface('HTMLTableColElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ javaapi#method(0,'getCh(', ')', 'String'),
@@ -642,7 +642,7 @@ call javaapi#interface('HTMLTableColElement', '', [
   \ javaapi#method(0,'setWidth(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTableElement', '', [
+call javaapi#interface('HTMLTableElement', 'HTMLElement', [
   \ javaapi#method(0,'getCaption(', ')', 'HTMLTableCaptionElement'),
   \ javaapi#method(0,'setCaption(', 'HTMLTableCaptionElement)', 'void'),
   \ javaapi#method(0,'getTHead(', ')', 'HTMLTableSectionElement'),
@@ -679,7 +679,7 @@ call javaapi#interface('HTMLTableElement', '', [
   \ javaapi#method(0,'deleteRow(', 'int) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTableRowElement', '', [
+call javaapi#interface('HTMLTableRowElement', 'HTMLElement', [
   \ javaapi#method(0,'getRowIndex(', ')', 'int'),
   \ javaapi#method(0,'getSectionRowIndex(', ')', 'int'),
   \ javaapi#method(0,'getCells(', ')', 'HTMLCollection'),
@@ -697,7 +697,7 @@ call javaapi#interface('HTMLTableRowElement', '', [
   \ javaapi#method(0,'deleteCell(', 'int) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTableSectionElement', '', [
+call javaapi#interface('HTMLTableSectionElement', 'HTMLElement', [
   \ javaapi#method(0,'getAlign(', ')', 'String'),
   \ javaapi#method(0,'setAlign(', 'String)', 'void'),
   \ javaapi#method(0,'getCh(', ')', 'String'),
@@ -711,7 +711,7 @@ call javaapi#interface('HTMLTableSectionElement', '', [
   \ javaapi#method(0,'deleteRow(', 'int) throws DOMException', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTextAreaElement', '', [
+call javaapi#interface('HTMLTextAreaElement', 'HTMLElement', [
   \ javaapi#method(0,'getDefaultValue(', ')', 'String'),
   \ javaapi#method(0,'setDefaultValue(', 'String)', 'void'),
   \ javaapi#method(0,'getForm(', ')', 'HTMLFormElement'),
@@ -737,12 +737,12 @@ call javaapi#interface('HTMLTextAreaElement', '', [
   \ javaapi#method(0,'select(', ')', 'void'),
   \ ])
 
-call javaapi#interface('HTMLTitleElement', '', [
+call javaapi#interface('HTMLTitleElement', 'HTMLElement', [
   \ javaapi#method(0,'getText(', ')', 'String'),
   \ javaapi#method(0,'setText(', 'String)', 'void'),
   \ ])
 
-call javaapi#interface('HTMLUListElement', '', [
+call javaapi#interface('HTMLUListElement', 'HTMLElement', [
   \ javaapi#method(0,'getCompact(', ')', 'boolean'),
   \ javaapi#method(0,'setCompact(', 'boolean)', 'void'),
   \ javaapi#method(0,'getType(', ')', 'String'),

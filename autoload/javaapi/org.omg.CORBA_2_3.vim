@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.CORBA_2_3')
 
-call javaapi#class('ORB', '', [
+call javaapi#class('ORB', 'ORB', [
   \ javaapi#method(0,'ORB(', ')', 'public'),
   \ javaapi#method(0,'register_value_factory(', 'String, ValueFactory)', 'ValueFactory'),
   \ javaapi#method(0,'unregister_value_factory(', 'String)', 'void'),

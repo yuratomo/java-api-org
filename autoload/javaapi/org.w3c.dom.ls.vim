@@ -9,7 +9,7 @@ call javaapi#interface('DOMImplementationLS', '', [
   \ javaapi#method(0,'createLSOutput(', ')', 'LSOutput'),
   \ ])
 
-call javaapi#class('LSException', '', [
+call javaapi#class('LSException', 'RuntimeException', [
   \ javaapi#field(0,'code', 'short'),
   \ javaapi#field(1,'PARSE_ERR', 'short'),
   \ javaapi#field(1,'SERIALIZE_ERR', 'short'),
@@ -35,7 +35,7 @@ call javaapi#interface('LSInput', '', [
   \ javaapi#method(0,'setCertifiedText(', 'boolean)', 'void'),
   \ ])
 
-call javaapi#interface('LSLoadEvent', '', [
+call javaapi#interface('LSLoadEvent', 'Event', [
   \ javaapi#method(0,'getNewDocument(', ')', 'Document'),
   \ javaapi#method(0,'getInput(', ')', 'LSInput'),
   \ ])
@@ -78,7 +78,7 @@ call javaapi#interface('LSParserFilter', '', [
   \ javaapi#method(0,'getWhatToShow(', ')', 'int'),
   \ ])
 
-call javaapi#interface('LSProgressEvent', '', [
+call javaapi#interface('LSProgressEvent', 'Event', [
   \ javaapi#method(0,'getInput(', ')', 'LSInput'),
   \ javaapi#method(0,'getPosition(', ')', 'int'),
   \ javaapi#method(0,'getTotalSize(', ')', 'int'),
@@ -99,7 +99,7 @@ call javaapi#interface('LSSerializer', '', [
   \ javaapi#method(0,'writeToString(', 'Node) throws DOMException, LSException', 'String'),
   \ ])
 
-call javaapi#interface('LSSerializerFilter', '', [
+call javaapi#interface('LSSerializerFilter', 'NodeFilter', [
   \ javaapi#method(0,'getWhatToShow(', ')', 'int'),
   \ ])
 

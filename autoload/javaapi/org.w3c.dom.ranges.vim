@@ -1,9 +1,13 @@
 call javaapi#namespace('org.w3c.dom.ranges')
 
-call javaapi#interface('DocumentRange', '', [
-  \ javaapi#method(0,'createRange(', ')', 'Range'),
+call javaapi#class('RangeException', 'RuntimeException', [
+  \ javaapi#field(0,'code', 'short'),
+  \ javaapi#field(1,'BAD_BOUNDARYPOINTS_ERR', 'short'),
+  \ javaapi#field(1,'INVALID_NODE_TYPE_ERR', 'short'),
+  \ javaapi#method(0,'RangeException(', 'short, String)', 'public'),
   \ ])
 
+call javaapi#namespace('org.w3c.dom.ranges')
 
 call javaapi#interface('Range', '', [
   \ javaapi#field(1,'START_TO_START', 'short'),
@@ -36,11 +40,9 @@ call javaapi#interface('Range', '', [
   \ javaapi#method(0,'detach(', ') throws DOMException', 'void'),
   \ ])
 
+call javaapi#namespace('org.w3c.dom.ranges')
 
-call javaapi#class('RangeException', '', [
-  \ javaapi#field(0,'code', 'short'),
-  \ javaapi#field(1,'BAD_BOUNDARYPOINTS_ERR', 'short'),
-  \ javaapi#field(1,'INVALID_NODE_TYPE_ERR', 'short'),
-  \ javaapi#method(0,'RangeException(', 'short, String)', 'public'),
+call javaapi#interface('DocumentRange', '', [
+  \ javaapi#method(0,'createRange(', ')', 'Range'),
   \ ])
 

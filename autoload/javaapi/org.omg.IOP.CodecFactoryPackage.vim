@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.IOP.CodecFactoryPackage')
 
-call javaapi#class('UnknownEncoding', '', [
+call javaapi#class('UnknownEncoding', 'UserException', [
   \ javaapi#method(0,'UnknownEncoding(', ')', 'public'),
   \ javaapi#method(0,'UnknownEncoding(', 'String)', 'public'),
   \ ])

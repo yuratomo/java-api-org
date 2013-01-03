@@ -1,27 +1,5 @@
 call javaapi#namespace('org.xml.sax.helpers')
 
-call javaapi#class('DefaultHandler', 'ErrorHandler', [
-  \ javaapi#method(0,'DefaultHandler(', ')', 'public'),
-  \ javaapi#method(0,'resolveEntity(', 'String, String) throws IOException, SAXException', 'InputSource'),
-  \ javaapi#method(0,'notationDecl(', 'String, String, String) throws SAXException', 'void'),
-  \ javaapi#method(0,'unparsedEntityDecl(', 'String, String, String, String) throws SAXException', 'void'),
-  \ javaapi#method(0,'setDocumentLocator(', 'Locator)', 'void'),
-  \ javaapi#method(0,'startDocument(', ') throws SAXException', 'void'),
-  \ javaapi#method(0,'endDocument(', ') throws SAXException', 'void'),
-  \ javaapi#method(0,'startPrefixMapping(', 'String, String) throws SAXException', 'void'),
-  \ javaapi#method(0,'endPrefixMapping(', 'String) throws SAXException', 'void'),
-  \ javaapi#method(0,'startElement(', 'String, String, String, Attributes) throws SAXException', 'void'),
-  \ javaapi#method(0,'endElement(', 'String, String, String) throws SAXException', 'void'),
-  \ javaapi#method(0,'characters(', 'char[], int, int) throws SAXException', 'void'),
-  \ javaapi#method(0,'ignorableWhitespace(', 'char[], int, int) throws SAXException', 'void'),
-  \ javaapi#method(0,'processingInstruction(', 'String, String) throws SAXException', 'void'),
-  \ javaapi#method(0,'skippedEntity(', 'String) throws SAXException', 'void'),
-  \ javaapi#method(0,'warning(', 'SAXParseException) throws SAXException', 'void'),
-  \ javaapi#method(0,'error(', 'SAXParseException) throws SAXException', 'void'),
-  \ javaapi#method(0,'fatalError(', 'SAXParseException) throws SAXException', 'void'),
-  \ ])
-
-
 call javaapi#class('AttributeListImpl', 'AttributeList', [
   \ javaapi#method(0,'AttributeListImpl(', ')', 'public'),
   \ javaapi#method(0,'AttributeListImpl(', 'AttributeList)', 'public'),
@@ -225,5 +203,28 @@ call javaapi#class('1', 'PrivilegedAction', [
 call javaapi#class('XMLReaderFactory', '', [
   \ javaapi#method(1,'createXMLReader(', ') throws SAXException', 'XMLReader'),
   \ javaapi#method(1,'createXMLReader(', 'String) throws SAXException', 'XMLReader'),
+  \ ])
+
+call javaapi#namespace('org.xml.sax.helpers')
+
+call javaapi#class('DefaultHandler', 'ErrorHandler', [
+  \ javaapi#method(0,'DefaultHandler(', ')', 'public'),
+  \ javaapi#method(0,'resolveEntity(', 'String, String) throws IOException, SAXException', 'InputSource'),
+  \ javaapi#method(0,'notationDecl(', 'String, String, String) throws SAXException', 'void'),
+  \ javaapi#method(0,'unparsedEntityDecl(', 'String, String, String, String) throws SAXException', 'void'),
+  \ javaapi#method(0,'setDocumentLocator(', 'Locator)', 'void'),
+  \ javaapi#method(0,'startDocument(', ') throws SAXException', 'void'),
+  \ javaapi#method(0,'endDocument(', ') throws SAXException', 'void'),
+  \ javaapi#method(0,'startPrefixMapping(', 'String, String) throws SAXException', 'void'),
+  \ javaapi#method(0,'endPrefixMapping(', 'String) throws SAXException', 'void'),
+  \ javaapi#method(0,'startElement(', 'String, String, String, Attributes) throws SAXException', 'void'),
+  \ javaapi#method(0,'endElement(', 'String, String, String) throws SAXException', 'void'),
+  \ javaapi#method(0,'characters(', 'char[], int, int) throws SAXException', 'void'),
+  \ javaapi#method(0,'ignorableWhitespace(', 'char[], int, int) throws SAXException', 'void'),
+  \ javaapi#method(0,'processingInstruction(', 'String, String) throws SAXException', 'void'),
+  \ javaapi#method(0,'skippedEntity(', 'String) throws SAXException', 'void'),
+  \ javaapi#method(0,'warning(', 'SAXParseException) throws SAXException', 'void'),
+  \ javaapi#method(0,'error(', 'SAXParseException) throws SAXException', 'void'),
+  \ javaapi#method(0,'fatalError(', 'SAXParseException) throws SAXException', 'void'),
   \ ])
 

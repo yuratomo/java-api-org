@@ -6,7 +6,7 @@ call javaapi#interface('XPathEvaluator', '', [
   \ javaapi#method(0,'evaluate(', 'String, Node, XPathNSResolver, short, Object) throws XPathException, DOMException', 'Object'),
   \ ])
 
-call javaapi#class('XPathException', '', [
+call javaapi#class('XPathException', 'RuntimeException', [
   \ javaapi#field(0,'code', 'short'),
   \ javaapi#field(1,'INVALID_EXPRESSION_ERR', 'short'),
   \ javaapi#field(1,'TYPE_ERR', 'short'),
@@ -21,7 +21,7 @@ call javaapi#interface('XPathNSResolver', '', [
   \ javaapi#method(0,'lookupNamespaceURI(', 'String)', 'String'),
   \ ])
 
-call javaapi#interface('XPathNamespace', '', [
+call javaapi#interface('XPathNamespace', 'Node', [
   \ javaapi#field(1,'XPATH_NAMESPACE_NODE', 'short'),
   \ javaapi#method(0,'getOwnerElement(', ')', 'Element'),
   \ ])

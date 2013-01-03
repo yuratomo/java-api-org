@@ -55,7 +55,7 @@ call javaapi#interface('GSSContext', '', [
   \ javaapi#method(0,'isInitiator(', ') throws GSSException', 'boolean'),
   \ ])
 
-call javaapi#interface('GSSCredential', '', [
+call javaapi#interface('GSSCredential', 'Cloneable', [
   \ javaapi#field(1,'INITIATE_AND_ACCEPT', 'int'),
   \ javaapi#field(1,'INITIATE_ONLY', 'int'),
   \ javaapi#field(1,'ACCEPT_ONLY', 'int'),
@@ -75,7 +75,7 @@ call javaapi#interface('GSSCredential', '', [
   \ javaapi#method(0,'hashCode(', ')', 'int'),
   \ ])
 
-call javaapi#class('GSSException', '', [
+call javaapi#class('GSSException', 'Exception', [
   \ javaapi#field(1,'BAD_BINDINGS', 'int'),
   \ javaapi#field(1,'BAD_MECH', 'int'),
   \ javaapi#field(1,'BAD_NAME', 'int'),

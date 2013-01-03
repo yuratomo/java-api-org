@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.PortableServer.POAPackage')
 
-call javaapi#class('AdapterAlreadyExists', '', [
+call javaapi#class('AdapterAlreadyExists', 'UserException', [
   \ javaapi#method(0,'AdapterAlreadyExists(', ')', 'public'),
   \ javaapi#method(0,'AdapterAlreadyExists(', 'String)', 'public'),
   \ ])
@@ -15,7 +15,7 @@ call javaapi#class('AdapterAlreadyExistsHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, AdapterAlreadyExists)', 'void'),
   \ ])
 
-call javaapi#class('AdapterNonExistent', '', [
+call javaapi#class('AdapterNonExistent', 'UserException', [
   \ javaapi#method(0,'AdapterNonExistent(', ')', 'public'),
   \ javaapi#method(0,'AdapterNonExistent(', 'String)', 'public'),
   \ ])
@@ -30,7 +30,7 @@ call javaapi#class('AdapterNonExistentHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, AdapterNonExistent)', 'void'),
   \ ])
 
-call javaapi#class('InvalidPolicy', '', [
+call javaapi#class('InvalidPolicy', 'UserException', [
   \ javaapi#field(0,'index', 'short'),
   \ javaapi#method(0,'InvalidPolicy(', ')', 'public'),
   \ javaapi#method(0,'InvalidPolicy(', 'short)', 'public'),
@@ -47,7 +47,7 @@ call javaapi#class('InvalidPolicyHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, InvalidPolicy)', 'void'),
   \ ])
 
-call javaapi#class('NoServant', '', [
+call javaapi#class('NoServant', 'UserException', [
   \ javaapi#method(0,'NoServant(', ')', 'public'),
   \ javaapi#method(0,'NoServant(', 'String)', 'public'),
   \ ])
@@ -62,7 +62,7 @@ call javaapi#class('NoServantHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, NoServant)', 'void'),
   \ ])
 
-call javaapi#class('ObjectAlreadyActive', '', [
+call javaapi#class('ObjectAlreadyActive', 'UserException', [
   \ javaapi#method(0,'ObjectAlreadyActive(', ')', 'public'),
   \ javaapi#method(0,'ObjectAlreadyActive(', 'String)', 'public'),
   \ ])
@@ -77,7 +77,7 @@ call javaapi#class('ObjectAlreadyActiveHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, ObjectAlreadyActive)', 'void'),
   \ ])
 
-call javaapi#class('ObjectNotActive', '', [
+call javaapi#class('ObjectNotActive', 'UserException', [
   \ javaapi#method(0,'ObjectNotActive(', ')', 'public'),
   \ javaapi#method(0,'ObjectNotActive(', 'String)', 'public'),
   \ ])
@@ -92,7 +92,7 @@ call javaapi#class('ObjectNotActiveHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, ObjectNotActive)', 'void'),
   \ ])
 
-call javaapi#class('ServantAlreadyActive', '', [
+call javaapi#class('ServantAlreadyActive', 'UserException', [
   \ javaapi#method(0,'ServantAlreadyActive(', ')', 'public'),
   \ javaapi#method(0,'ServantAlreadyActive(', 'String)', 'public'),
   \ ])
@@ -107,7 +107,7 @@ call javaapi#class('ServantAlreadyActiveHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, ServantAlreadyActive)', 'void'),
   \ ])
 
-call javaapi#class('ServantNotActive', '', [
+call javaapi#class('ServantNotActive', 'UserException', [
   \ javaapi#method(0,'ServantNotActive(', ')', 'public'),
   \ javaapi#method(0,'ServantNotActive(', 'String)', 'public'),
   \ ])
@@ -122,7 +122,7 @@ call javaapi#class('ServantNotActiveHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, ServantNotActive)', 'void'),
   \ ])
 
-call javaapi#class('WrongAdapter', '', [
+call javaapi#class('WrongAdapter', 'UserException', [
   \ javaapi#method(0,'WrongAdapter(', ')', 'public'),
   \ javaapi#method(0,'WrongAdapter(', 'String)', 'public'),
   \ ])
@@ -137,7 +137,7 @@ call javaapi#class('WrongAdapterHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, WrongAdapter)', 'void'),
   \ ])
 
-call javaapi#class('WrongPolicy', '', [
+call javaapi#class('WrongPolicy', 'UserException', [
   \ javaapi#method(0,'WrongPolicy(', ')', 'public'),
   \ javaapi#method(0,'WrongPolicy(', 'String)', 'public'),
   \ ])

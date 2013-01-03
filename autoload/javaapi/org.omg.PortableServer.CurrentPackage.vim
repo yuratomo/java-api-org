@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.PortableServer.CurrentPackage')
 
-call javaapi#class('NoContext', '', [
+call javaapi#class('NoContext', 'UserException', [
   \ javaapi#method(0,'NoContext(', ')', 'public'),
   \ javaapi#method(0,'NoContext(', 'String)', 'public'),
   \ ])

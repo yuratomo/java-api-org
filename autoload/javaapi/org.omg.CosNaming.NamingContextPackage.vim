@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.CosNaming.NamingContextPackage')
 
-call javaapi#class('AlreadyBound', '', [
+call javaapi#class('AlreadyBound', 'UserException', [
   \ javaapi#method(0,'AlreadyBound(', ')', 'public'),
   \ javaapi#method(0,'AlreadyBound(', 'String)', 'public'),
   \ ])
@@ -24,7 +24,7 @@ call javaapi#class('AlreadyBoundHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#class('CannotProceed', '', [
+call javaapi#class('CannotProceed', 'UserException', [
   \ javaapi#field(0,'cxt', 'NamingContext'),
   \ javaapi#field(0,'rest_of_name', 'NameComponent[]'),
   \ javaapi#method(0,'CannotProceed(', ')', 'public'),
@@ -51,7 +51,7 @@ call javaapi#class('CannotProceedHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#class('InvalidName', '', [
+call javaapi#class('InvalidName', 'UserException', [
   \ javaapi#method(0,'InvalidName(', ')', 'public'),
   \ javaapi#method(0,'InvalidName(', 'String)', 'public'),
   \ ])
@@ -75,7 +75,7 @@ call javaapi#class('InvalidNameHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#class('NotEmpty', '', [
+call javaapi#class('NotEmpty', 'UserException', [
   \ javaapi#method(0,'NotEmpty(', ')', 'public'),
   \ javaapi#method(0,'NotEmpty(', 'String)', 'public'),
   \ ])
@@ -99,7 +99,7 @@ call javaapi#class('NotEmptyHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#class('NotFound', '', [
+call javaapi#class('NotFound', 'UserException', [
   \ javaapi#field(0,'why', 'NotFoundReason'),
   \ javaapi#field(0,'rest_of_name', 'NameComponent[]'),
   \ javaapi#method(0,'NotFound(', ')', 'public'),

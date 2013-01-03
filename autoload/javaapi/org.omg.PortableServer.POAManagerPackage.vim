@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.PortableServer.POAManagerPackage')
 
-call javaapi#class('AdapterInactive', '', [
+call javaapi#class('AdapterInactive', 'UserException', [
   \ javaapi#method(0,'AdapterInactive(', ')', 'public'),
   \ javaapi#method(0,'AdapterInactive(', 'String)', 'public'),
   \ ])

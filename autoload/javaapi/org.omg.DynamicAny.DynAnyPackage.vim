@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.DynamicAny.DynAnyPackage')
 
-call javaapi#class('InvalidValue', '', [
+call javaapi#class('InvalidValue', 'UserException', [
   \ javaapi#method(0,'InvalidValue(', ')', 'public'),
   \ javaapi#method(0,'InvalidValue(', 'String)', 'public'),
   \ ])
@@ -15,7 +15,7 @@ call javaapi#class('InvalidValueHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, InvalidValue)', 'void'),
   \ ])
 
-call javaapi#class('TypeMismatch', '', [
+call javaapi#class('TypeMismatch', 'UserException', [
   \ javaapi#method(0,'TypeMismatch(', ')', 'public'),
   \ javaapi#method(0,'TypeMismatch(', 'String)', 'public'),
   \ ])

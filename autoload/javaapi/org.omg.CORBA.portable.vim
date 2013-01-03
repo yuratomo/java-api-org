@@ -1,6 +1,6 @@
 call javaapi#namespace('org.omg.CORBA.portable')
 
-call javaapi#class('ApplicationException', '', [
+call javaapi#class('ApplicationException', 'Exception', [
   \ javaapi#method(0,'ApplicationException(', 'String, InputStream)', 'public'),
   \ javaapi#method(0,'getId(', ')', 'String'),
   \ javaapi#method(0,'getInputStream(', ')', 'InputStream'),
@@ -12,7 +12,7 @@ call javaapi#interface('BoxedValueHelper', '', [
   \ javaapi#method(0,'get_id(', ')', 'String'),
   \ ])
 
-call javaapi#interface('CustomValue', '', [
+call javaapi#interface('CustomValue', 'CustomMarshal', [
   \ ])
 
 call javaapi#class('Delegate', '', [
@@ -42,15 +42,15 @@ call javaapi#class('Delegate', '', [
   \ javaapi#method(0,'equals(', 'Object, Object)', 'boolean'),
   \ ])
 
-call javaapi#interface('IDLEntity', '', [
+call javaapi#interface('IDLEntity', 'Serializable', [
   \ ])
 
-call javaapi#class('IndirectionException', '', [
+call javaapi#class('IndirectionException', 'SystemException', [
   \ javaapi#field(0,'offset', 'int'),
   \ javaapi#method(0,'IndirectionException(', 'int)', 'public'),
   \ ])
 
-call javaapi#class('InputStream', '', [
+call javaapi#class('InputStream', 'InputStream', [
   \ javaapi#method(0,'InputStream(', ')', 'public'),
   \ javaapi#method(0,'read_boolean(', ')', 'boolean'),
   \ javaapi#method(0,'read_char(', ')', 'char'),
@@ -123,7 +123,7 @@ call javaapi#class('ObjectImpl', 'Object', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('OutputStream', '', [
+call javaapi#class('OutputStream', 'OutputStream', [
   \ javaapi#method(0,'OutputStream(', ')', 'public'),
   \ javaapi#method(0,'create_input_stream(', ')', 'InputStream'),
   \ javaapi#method(0,'write_boolean(', 'boolean)', 'void'),
@@ -162,7 +162,7 @@ call javaapi#class('OutputStream', '', [
   \ javaapi#method(0,'orb(', ')', 'ORB'),
   \ ])
 
-call javaapi#class('RemarshalException', '', [
+call javaapi#class('RemarshalException', 'Exception', [
   \ javaapi#method(0,'RemarshalException(', ')', 'public'),
   \ ])
 
@@ -182,15 +182,15 @@ call javaapi#interface('Streamable', '', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#interface('StreamableValue', '', [
+call javaapi#interface('StreamableValue', 'ValueBase', [
   \ ])
 
-call javaapi#class('UnknownException', '', [
+call javaapi#class('UnknownException', 'SystemException', [
   \ javaapi#field(0,'originalEx', 'Throwable'),
   \ javaapi#method(0,'UnknownException(', 'Throwable)', 'public'),
   \ ])
 
-call javaapi#interface('ValueBase', '', [
+call javaapi#interface('ValueBase', 'IDLEntity', [
   \ javaapi#method(0,'_truncatable_ids(', ')', 'String[]'),
   \ ])
 

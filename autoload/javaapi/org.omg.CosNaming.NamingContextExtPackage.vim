@@ -10,7 +10,7 @@ call javaapi#class('AddressHelper', '', [
   \ javaapi#method(1,'write(', 'OutputStream, String)', 'void'),
   \ ])
 
-call javaapi#class('InvalidAddress', '', [
+call javaapi#class('InvalidAddress', 'UserException', [
   \ javaapi#method(0,'InvalidAddress(', ')', 'public'),
   \ javaapi#method(0,'InvalidAddress(', 'String)', 'public'),
   \ ])

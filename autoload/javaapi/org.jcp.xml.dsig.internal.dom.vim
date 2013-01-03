@@ -1,6 +1,6 @@
 call javaapi#namespace('org.jcp.xml.dsig.internal.dom')
 
-call javaapi#class('ApacheCanonicalizer', '', [
+call javaapi#class('ApacheCanonicalizer', 'TransformService', [
   \ javaapi#method(0,'ApacheCanonicalizer(', ')', 'public'),
   \ javaapi#method(0,'getParameterSpec(', ')', 'AlgorithmParameterSpec'),
   \ javaapi#method(0,'init(', 'XMLStructure, XMLCryptoContext) throws InvalidAlgorithmParameterException', 'void'),
@@ -11,7 +11,7 @@ call javaapi#class('ApacheCanonicalizer', '', [
   \ javaapi#method(0,'isFeatureSupported(', 'String)', 'boolean'),
   \ ])
 
-call javaapi#interface('ApacheData', '', [
+call javaapi#interface('ApacheData', 'Data', [
   \ javaapi#method(0,'getXMLSignatureInput(', ')', 'XMLSignatureInput'),
   \ ])
 
@@ -21,12 +21,12 @@ call javaapi#class('ApacheNodeSetData', 'NodeSetData', [
   \ javaapi#method(0,'getXMLSignatureInput(', ')', 'XMLSignatureInput'),
   \ ])
 
-call javaapi#class('ApacheOctetStreamData', '', [
+call javaapi#class('ApacheOctetStreamData', 'OctetStreamData', [
   \ javaapi#method(0,'ApacheOctetStreamData(', 'XMLSignatureInput) throws CanonicalizationException, IOException', 'public'),
   \ javaapi#method(0,'getXMLSignatureInput(', ')', 'XMLSignatureInput'),
   \ ])
 
-call javaapi#class('ApacheTransform', '', [
+call javaapi#class('ApacheTransform', 'TransformService', [
   \ javaapi#method(0,'ApacheTransform(', ')', 'public'),
   \ javaapi#method(0,'getParameterSpec(', ')', 'AlgorithmParameterSpec'),
   \ javaapi#method(0,'init(', 'XMLStructure, XMLCryptoContext) throws InvalidAlgorithmParameterException', 'void'),
@@ -36,12 +36,12 @@ call javaapi#class('ApacheTransform', '', [
   \ javaapi#method(0,'isFeatureSupported(', 'String)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMBase64Transform', '', [
+call javaapi#class('DOMBase64Transform', 'ApacheTransform', [
   \ javaapi#method(0,'DOMBase64Transform(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ ])
 
-call javaapi#class('DOMCanonicalXMLC14N11Method', '', [
+call javaapi#class('DOMCanonicalXMLC14N11Method', 'ApacheCanonicalizer', [
   \ javaapi#field(1,'C14N_11', 'String'),
   \ javaapi#field(1,'C14N_11_WITH_COMMENTS', 'String'),
   \ javaapi#method(0,'DOMCanonicalXMLC14N11Method(', ')', 'public'),
@@ -49,13 +49,13 @@ call javaapi#class('DOMCanonicalXMLC14N11Method', '', [
   \ javaapi#method(0,'transform(', 'Data, XMLCryptoContext) throws TransformException', 'Data'),
   \ ])
 
-call javaapi#class('DOMCanonicalXMLC14NMethod', '', [
+call javaapi#class('DOMCanonicalXMLC14NMethod', 'ApacheCanonicalizer', [
   \ javaapi#method(0,'DOMCanonicalXMLC14NMethod(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'transform(', 'Data, XMLCryptoContext) throws TransformException', 'Data'),
   \ ])
 
-call javaapi#class('DOMCanonicalizationMethod', '', [
+call javaapi#class('DOMCanonicalizationMethod', 'DOMTransform', [
   \ javaapi#method(0,'DOMCanonicalizationMethod(', 'TransformService) throws InvalidAlgorithmParameterException', 'public'),
   \ javaapi#method(0,'DOMCanonicalizationMethod(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'canonicalize(', 'Data, XMLCryptoContext) throws TransformException', 'Data'),
@@ -63,41 +63,41 @@ call javaapi#class('DOMCanonicalizationMethod', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMCryptoBinary', '', [
+call javaapi#class('DOMCryptoBinary', 'DOMStructure', [
   \ javaapi#method(0,'DOMCryptoBinary(', 'BigInteger)', 'public'),
   \ javaapi#method(0,'DOMCryptoBinary(', 'Node) throws MarshalException', 'public'),
   \ javaapi#method(0,'getBigNum(', ')', 'BigInteger'),
   \ javaapi#method(0,'marshal(', 'Node, String, DOMCryptoContext) throws MarshalException', 'void'),
   \ ])
 
-call javaapi#class('SHA1', '', [
+call javaapi#class('SHA1', 'DOMDigestMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA256', '', [
+call javaapi#class('SHA256', 'DOMDigestMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA384', '', [
+call javaapi#class('SHA384', 'DOMDigestMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA512', '', [
+call javaapi#class('SHA512', 'DOMDigestMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('DOMDigestMethod', '', [
+call javaapi#class('DOMDigestMethod', 'DOMStructure', [
   \ javaapi#method(0,'getParameterSpec(', ')', 'AlgorithmParameterSpec'),
   \ javaapi#method(0,'marshal(', 'Node, String, DOMCryptoContext) throws MarshalException', 'void'),
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMEnvelopedTransform', '', [
+call javaapi#class('DOMEnvelopedTransform', 'ApacheTransform', [
   \ javaapi#method(0,'DOMEnvelopedTransform(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ ])
 
-call javaapi#class('DOMExcC14NMethod', '', [
+call javaapi#class('DOMExcC14NMethod', 'ApacheCanonicalizer', [
   \ javaapi#method(0,'DOMExcC14NMethod(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'init(', 'XMLStructure, XMLCryptoContext) throws InvalidAlgorithmParameterException', 'void'),
@@ -106,26 +106,26 @@ call javaapi#class('DOMExcC14NMethod', '', [
   \ javaapi#method(0,'transform(', 'Data, XMLCryptoContext) throws TransformException', 'Data'),
   \ ])
 
-call javaapi#class('SHA1', '', [
+call javaapi#class('SHA1', 'DOMHMACSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA256', '', [
+call javaapi#class('SHA256', 'DOMHMACSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA384', '', [
+call javaapi#class('SHA384', 'DOMHMACSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA512', '', [
+call javaapi#class('SHA512', 'DOMHMACSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('DOMHMACSignatureMethod', '', [
+call javaapi#class('DOMHMACSignatureMethod', 'DOMSignatureMethod', [
   \ ])
 
-call javaapi#class('DOMKeyInfo', '', [
+call javaapi#class('DOMKeyInfo', 'DOMStructure', [
   \ javaapi#method(0,'DOMKeyInfo(', 'List, String)', 'public'),
   \ javaapi#method(0,'DOMKeyInfo(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'getId(', ')', 'String'),
@@ -136,7 +136,7 @@ call javaapi#class('DOMKeyInfo', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMKeyInfoFactory', '', [
+call javaapi#class('DOMKeyInfoFactory', 'KeyInfoFactory', [
   \ javaapi#method(0,'DOMKeyInfoFactory(', ')', 'public'),
   \ javaapi#method(0,'newKeyInfo(', 'List)', 'KeyInfo'),
   \ javaapi#method(0,'newKeyInfo(', 'List, String)', 'KeyInfo'),
@@ -154,7 +154,7 @@ call javaapi#class('DOMKeyInfoFactory', '', [
   \ javaapi#method(0,'unmarshalKeyInfo(', 'XMLStructure) throws MarshalException', 'KeyInfo'),
   \ ])
 
-call javaapi#class('DOMKeyName', '', [
+call javaapi#class('DOMKeyName', 'DOMStructure', [
   \ javaapi#method(0,'DOMKeyName(', 'String)', 'public'),
   \ javaapi#method(0,'DOMKeyName(', 'Element)', 'public'),
   \ javaapi#method(0,'getName(', ')', 'String'),
@@ -162,7 +162,7 @@ call javaapi#class('DOMKeyName', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMKeyValue', '', [
+call javaapi#class('DOMKeyValue', 'DOMStructure', [
   \ javaapi#method(0,'DOMKeyValue(', 'PublicKey) throws KeyException', 'public'),
   \ javaapi#method(0,'DOMKeyValue(', 'Element) throws MarshalException', 'public'),
   \ javaapi#method(0,'getPublicKey(', ') throws KeyException', 'PublicKey'),
@@ -170,7 +170,7 @@ call javaapi#class('DOMKeyValue', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMManifest', '', [
+call javaapi#class('DOMManifest', 'DOMStructure', [
   \ javaapi#method(0,'DOMManifest(', 'List, String)', 'public'),
   \ javaapi#method(0,'DOMManifest(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'getId(', ')', 'String'),
@@ -179,7 +179,7 @@ call javaapi#class('DOMManifest', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMPGPData', '', [
+call javaapi#class('DOMPGPData', 'DOMStructure', [
   \ javaapi#method(0,'DOMPGPData(', 'byte[], List)', 'public'),
   \ javaapi#method(0,'DOMPGPData(', 'byte[], byte[], List)', 'public'),
   \ javaapi#method(0,'DOMPGPData(', 'Element) throws MarshalException', 'public'),
@@ -198,7 +198,7 @@ call javaapi#class('2', 'NodeSetData', [
   \ javaapi#method(0,'iterator(', ')', 'Iterator'),
   \ ])
 
-call javaapi#class('DOMReference', '', [
+call javaapi#class('DOMReference', 'DOMStructure', [
   \ javaapi#method(0,'DOMReference(', 'String, String, DigestMethod, List, String, Provider)', 'public'),
   \ javaapi#method(0,'DOMReference(', 'String, String, DigestMethod, List, Data, List, String, Provider)', 'public'),
   \ javaapi#method(0,'DOMReference(', 'String, String, DigestMethod, List, Data, List, String, byte[], Provider)', 'public'),
@@ -219,7 +219,7 @@ call javaapi#class('DOMReference', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMRetrievalMethod', '', [
+call javaapi#class('DOMRetrievalMethod', 'DOMStructure', [
   \ javaapi#method(0,'DOMRetrievalMethod(', 'String, String, List)', 'public'),
   \ javaapi#method(0,'DOMRetrievalMethod(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'getURI(', ')', 'String'),
@@ -232,33 +232,33 @@ call javaapi#class('DOMRetrievalMethod', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('SHA1withDSA', '', [
+call javaapi#class('SHA1withDSA', 'DOMSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA1withRSA', '', [
+call javaapi#class('SHA1withRSA', 'DOMSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA256withRSA', '', [
+call javaapi#class('SHA256withRSA', 'DOMSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA384withRSA', '', [
+call javaapi#class('SHA384withRSA', 'DOMSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('SHA512withRSA', '', [
+call javaapi#class('SHA512withRSA', 'DOMSignatureMethod', [
   \ javaapi#method(0,'getAlgorithm(', ')', 'String'),
   \ ])
 
-call javaapi#class('DOMSignatureMethod', '', [
+call javaapi#class('DOMSignatureMethod', 'DOMStructure', [
   \ javaapi#method(0,'getParameterSpec(', ')', 'AlgorithmParameterSpec'),
   \ javaapi#method(0,'marshal(', 'Node, String, DOMCryptoContext) throws MarshalException', 'void'),
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMSignatureProperties', '', [
+call javaapi#class('DOMSignatureProperties', 'DOMStructure', [
   \ javaapi#method(0,'DOMSignatureProperties(', 'List, String)', 'public'),
   \ javaapi#method(0,'DOMSignatureProperties(', 'Element) throws MarshalException', 'public'),
   \ javaapi#method(0,'getProperties(', ')', 'List'),
@@ -267,7 +267,7 @@ call javaapi#class('DOMSignatureProperties', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMSignatureProperty', '', [
+call javaapi#class('DOMSignatureProperty', 'DOMStructure', [
   \ javaapi#method(0,'DOMSignatureProperty(', 'List, String, String)', 'public'),
   \ javaapi#method(0,'DOMSignatureProperty(', 'Element) throws MarshalException', 'public'),
   \ javaapi#method(0,'getContent(', ')', 'List'),
@@ -277,7 +277,7 @@ call javaapi#class('DOMSignatureProperty', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMSignedInfo', '', [
+call javaapi#class('DOMSignedInfo', 'DOMStructure', [
   \ javaapi#method(0,'DOMSignedInfo(', 'CanonicalizationMethod, SignatureMethod, List)', 'public'),
   \ javaapi#method(0,'DOMSignedInfo(', 'CanonicalizationMethod, SignatureMethod, List, String)', 'public'),
   \ javaapi#method(0,'DOMSignedInfo(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
@@ -310,7 +310,7 @@ call javaapi#class('DOMSubTreeData', 'NodeSetData', [
   \ javaapi#method(0,'excludeComments(', ')', 'boolean'),
   \ ])
 
-call javaapi#class('DOMTransform', '', [
+call javaapi#class('DOMTransform', 'DOMStructure', [
   \ javaapi#method(0,'DOMTransform(', 'TransformService)', 'public'),
   \ javaapi#method(0,'DOMTransform(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'getParameterSpec(', ')', 'AlgorithmParameterSpec'),
@@ -331,7 +331,7 @@ call javaapi#class('1', 'Iterator', [
   \ javaapi#method(0,'hasNext(', ')', 'boolean'),
   \ ])
 
-call javaapi#class('NodeSet', '', [
+call javaapi#class('NodeSet', 'AbstractSet', [
   \ javaapi#method(0,'NodeSet(', 'NodeList)', 'public'),
   \ javaapi#method(0,'size(', ')', 'int'),
   \ javaapi#method(0,'iterator(', ')', 'Iterator'),
@@ -355,7 +355,7 @@ call javaapi#class('DOMUtils', '', [
   \ javaapi#method(1,'paramsEqual(', 'AlgorithmParameterSpec, AlgorithmParameterSpec)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMX509Data', '', [
+call javaapi#class('DOMX509Data', 'DOMStructure', [
   \ javaapi#method(0,'DOMX509Data(', 'List)', 'public'),
   \ javaapi#method(0,'DOMX509Data(', 'Element) throws MarshalException', 'public'),
   \ javaapi#method(0,'getContent(', ')', 'List'),
@@ -363,7 +363,7 @@ call javaapi#class('DOMX509Data', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMX509IssuerSerial', '', [
+call javaapi#class('DOMX509IssuerSerial', 'DOMStructure', [
   \ javaapi#method(0,'DOMX509IssuerSerial(', 'String, BigInteger)', 'public'),
   \ javaapi#method(0,'DOMX509IssuerSerial(', 'Element)', 'public'),
   \ javaapi#method(0,'getIssuerName(', ')', 'String'),
@@ -372,7 +372,7 @@ call javaapi#class('DOMX509IssuerSerial', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMXMLObject', '', [
+call javaapi#class('DOMXMLObject', 'DOMStructure', [
   \ javaapi#method(0,'DOMXMLObject(', 'List, String, String, String)', 'public'),
   \ javaapi#method(0,'DOMXMLObject(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'getContent(', ')', 'List'),
@@ -383,7 +383,7 @@ call javaapi#class('DOMXMLObject', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMSignatureValue', '', [
+call javaapi#class('DOMSignatureValue', 'DOMStructure', [
   \ javaapi#method(0,'getId(', ')', 'String'),
   \ javaapi#method(0,'getValue(', ')', 'byte[]'),
   \ javaapi#method(0,'validate(', 'XMLValidateContext) throws XMLSignatureException', 'boolean'),
@@ -391,7 +391,7 @@ call javaapi#class('DOMSignatureValue', '', [
   \ javaapi#method(0,'marshal(', 'Node, String, DOMCryptoContext) throws MarshalException', 'void'),
   \ ])
 
-call javaapi#class('DOMXMLSignature', '', [
+call javaapi#class('DOMXMLSignature', 'DOMStructure', [
   \ javaapi#method(0,'DOMXMLSignature(', 'SignedInfo, KeyInfo, List, String, String)', 'public'),
   \ javaapi#method(0,'DOMXMLSignature(', 'Element, XMLCryptoContext, Provider) throws MarshalException', 'public'),
   \ javaapi#method(0,'getId(', ')', 'String'),
@@ -407,7 +407,7 @@ call javaapi#class('DOMXMLSignature', '', [
   \ javaapi#method(0,'equals(', 'Object)', 'boolean'),
   \ ])
 
-call javaapi#class('DOMXMLSignatureFactory', '', [
+call javaapi#class('DOMXMLSignatureFactory', 'XMLSignatureFactory', [
   \ javaapi#method(0,'DOMXMLSignatureFactory(', ')', 'public'),
   \ javaapi#method(0,'newXMLSignature(', 'SignedInfo, KeyInfo)', 'XMLSignature'),
   \ javaapi#method(0,'newXMLSignature(', 'SignedInfo, KeyInfo, List, String, String)', 'XMLSignature'),
@@ -434,21 +434,21 @@ call javaapi#class('DOMXMLSignatureFactory', '', [
   \ javaapi#method(0,'getURIDereferencer(', ')', 'URIDereferencer'),
   \ ])
 
-call javaapi#class('DOMXPathFilter2Transform', '', [
+call javaapi#class('DOMXPathFilter2Transform', 'ApacheTransform', [
   \ javaapi#method(0,'DOMXPathFilter2Transform(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'init(', 'XMLStructure, XMLCryptoContext) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'marshalParams(', 'XMLStructure, XMLCryptoContext) throws MarshalException', 'void'),
   \ ])
 
-call javaapi#class('DOMXPathTransform', '', [
+call javaapi#class('DOMXPathTransform', 'ApacheTransform', [
   \ javaapi#method(0,'DOMXPathTransform(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'init(', 'XMLStructure, XMLCryptoContext) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'marshalParams(', 'XMLStructure, XMLCryptoContext) throws MarshalException', 'void'),
   \ ])
 
-call javaapi#class('DOMXSLTTransform', '', [
+call javaapi#class('DOMXSLTTransform', 'ApacheTransform', [
   \ javaapi#method(0,'DOMXSLTTransform(', ')', 'public'),
   \ javaapi#method(0,'init(', 'TransformParameterSpec) throws InvalidAlgorithmParameterException', 'void'),
   \ javaapi#method(0,'init(', 'XMLStructure, XMLCryptoContext) throws InvalidAlgorithmParameterException', 'void'),
@@ -465,7 +465,7 @@ call javaapi#class('1', 'PrivilegedAction', [
   \ javaapi#method(0,'run(', ')', 'Object'),
   \ ])
 
-call javaapi#class('XMLDSigRI', '', [
+call javaapi#class('XMLDSigRI', 'Provider', [
   \ javaapi#method(0,'XMLDSigRI(', ')', 'public'),
   \ ])
 

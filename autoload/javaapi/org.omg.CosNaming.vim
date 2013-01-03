@@ -1,103 +1,5 @@
 call javaapi#namespace('org.omg.CosNaming')
 
-call javaapi#class('_BindingIteratorImplBase', '', [
-  \ javaapi#method(0,'_BindingIteratorImplBase(', ')', 'public'),
-  \ javaapi#method(0,'_ids(', ')', 'String[]'),
-  \ javaapi#method(0,'invoke(', 'ServerRequest)', 'void'),
-  \ ])
-
-call javaapi#class('_BindingIteratorStub', '', [
-  \ javaapi#method(0,'_BindingIteratorStub(', ')', 'public'),
-  \ javaapi#method(0,'next_one(', 'BindingHolder)', 'boolean'),
-  \ javaapi#method(0,'next_n(', 'int, BindingListHolder)', 'boolean'),
-  \ javaapi#method(0,'destroy(', ')', 'void'),
-  \ javaapi#method(0,'_ids(', ')', 'String[]'),
-  \ ])
-
-call javaapi#class('_NamingContextExtStub', '', [
-  \ javaapi#method(0,'_NamingContextExtStub(', ')', 'public'),
-  \ javaapi#method(0,'to_string(', 'NameComponent[]) throws InvalidName', 'String'),
-  \ javaapi#method(0,'to_name(', 'String) throws InvalidName', 'NameComponent[]'),
-  \ javaapi#method(0,'to_url(', 'String, String) throws InvalidAddress, InvalidName', 'String'),
-  \ javaapi#method(0,'resolve_str(', 'String) throws NotFound, CannotProceed, InvalidName', 'Object'),
-  \ javaapi#method(0,'bind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
-  \ javaapi#method(0,'bind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
-  \ javaapi#method(0,'rebind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'rebind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'resolve(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'Object'),
-  \ javaapi#method(0,'unbind(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'list(', 'int, BindingListHolder, BindingIteratorHolder)', 'void'),
-  \ javaapi#method(0,'new_context(', ')', 'NamingContext'),
-  \ javaapi#method(0,'bind_new_context(', 'NameComponent[]) throws NotFound, AlreadyBound, CannotProceed, InvalidName', 'NamingContext'),
-  \ javaapi#method(0,'destroy(', ') throws NotEmpty', 'void'),
-  \ javaapi#method(0,'_ids(', ')', 'String[]'),
-  \ ])
-
-call javaapi#class('_NamingContextImplBase', '', [
-  \ javaapi#method(0,'_NamingContextImplBase(', ')', 'public'),
-  \ javaapi#method(0,'_ids(', ')', 'String[]'),
-  \ javaapi#method(0,'invoke(', 'ServerRequest)', 'void'),
-  \ ])
-
-call javaapi#class('_NamingContextStub', '', [
-  \ javaapi#method(0,'_NamingContextStub(', ')', 'public'),
-  \ javaapi#method(0,'bind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
-  \ javaapi#method(0,'bind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
-  \ javaapi#method(0,'rebind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'rebind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'resolve(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'Object'),
-  \ javaapi#method(0,'unbind(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'list(', 'int, BindingListHolder, BindingIteratorHolder)', 'void'),
-  \ javaapi#method(0,'new_context(', ')', 'NamingContext'),
-  \ javaapi#method(0,'bind_new_context(', 'NameComponent[]) throws NotFound, AlreadyBound, CannotProceed, InvalidName', 'NamingContext'),
-  \ javaapi#method(0,'destroy(', ') throws NotEmpty', 'void'),
-  \ javaapi#method(0,'_ids(', ')', 'String[]'),
-  \ ])
-
-
-call javaapi#class('NamingContextHelper', '', [
-  \ javaapi#method(0,'NamingContextHelper(', ')', 'public'),
-  \ javaapi#method(1,'insert(', 'Any, NamingContext)', 'void'),
-  \ javaapi#method(1,'extract(', 'Any)', 'NamingContext'),
-  \ javaapi#method(1,'type(', ')', 'TypeCode'),
-  \ javaapi#method(1,'id(', ')', 'String'),
-  \ javaapi#method(1,'read(', 'InputStream)', 'NamingContext'),
-  \ javaapi#method(1,'write(', 'OutputStream, NamingContext)', 'void'),
-  \ javaapi#method(1,'narrow(', 'Object)', 'NamingContext'),
-  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'NamingContext'),
-  \ ])
-
-call javaapi#class('NamingContextHolder', 'Streamable', [
-  \ javaapi#field(0,'value', 'NamingContext'),
-  \ javaapi#method(0,'NamingContextHolder(', ')', 'public'),
-  \ javaapi#method(0,'NamingContextHolder(', 'NamingContext)', 'public'),
-  \ javaapi#method(0,'_read(', 'InputStream)', 'void'),
-  \ javaapi#method(0,'_write(', 'OutputStream)', 'void'),
-  \ javaapi#method(0,'_type(', ')', 'TypeCode'),
-  \ ])
-
-call javaapi#interface('NamingContextOperations', '', [
-  \ javaapi#method(0,'bind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
-  \ javaapi#method(0,'bind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
-  \ javaapi#method(0,'rebind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'rebind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'resolve(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'Object'),
-  \ javaapi#method(0,'unbind(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'void'),
-  \ javaapi#method(0,'list(', 'int, BindingListHolder, BindingIteratorHolder)', 'void'),
-  \ javaapi#method(0,'new_context(', ')', 'NamingContext'),
-  \ javaapi#method(0,'bind_new_context(', 'NameComponent[]) throws NotFound, AlreadyBound, CannotProceed, InvalidName', 'NamingContext'),
-  \ javaapi#method(0,'destroy(', ') throws NotEmpty', 'void'),
-  \ ])
-
-call javaapi#class('NamingContextPOA', '', [
-  \ javaapi#method(0,'NamingContextPOA(', ')', 'public'),
-  \ javaapi#method(0,'_invoke(', 'String, InputStream, ResponseHandler)', 'OutputStream'),
-  \ javaapi#method(0,'_all_interfaces(', 'POA, byte[])', 'String[]'),
-  \ javaapi#method(0,'_this(', ')', 'NamingContext'),
-  \ javaapi#method(0,'_this(', 'ORB)', 'NamingContext'),
-  \ ])
-
-
 call javaapi#class('Binding', 'IDLEntity', [
   \ javaapi#field(0,'binding_name', 'NameComponent[]'),
   \ javaapi#field(0,'binding_type', 'BindingType'),
@@ -124,7 +26,7 @@ call javaapi#class('BindingHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#interface('BindingIterator', '', [
+call javaapi#interface('BindingIterator', 'IDLEntity', [
   \ ])
 
 call javaapi#class('BindingIteratorHelper', '', [
@@ -154,7 +56,7 @@ call javaapi#interface('BindingIteratorOperations', '', [
   \ javaapi#method(0,'destroy(', ')', 'void'),
   \ ])
 
-call javaapi#class('BindingIteratorPOA', '', [
+call javaapi#class('BindingIteratorPOA', 'Servant', [
   \ javaapi#method(0,'BindingIteratorPOA(', ')', 'public'),
   \ javaapi#method(0,'_invoke(', 'String, InputStream, ResponseHandler)', 'OutputStream'),
   \ javaapi#method(0,'_all_interfaces(', 'POA, byte[])', 'String[]'),
@@ -264,10 +166,10 @@ call javaapi#class('NameHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#interface('NamingContext', '', [
+call javaapi#interface('NamingContext', 'IDLEntity', [
   \ ])
 
-call javaapi#interface('NamingContextExt', '', [
+call javaapi#interface('NamingContextExt', 'IDLEntity', [
   \ ])
 
 call javaapi#class('NamingContextExtHelper', '', [
@@ -291,18 +193,118 @@ call javaapi#class('NamingContextExtHolder', 'Streamable', [
   \ javaapi#method(0,'_type(', ')', 'TypeCode'),
   \ ])
 
-call javaapi#interface('NamingContextExtOperations', '', [
+call javaapi#interface('NamingContextExtOperations', 'NamingContextOperations', [
   \ javaapi#method(0,'to_string(', 'NameComponent[]) throws InvalidName', 'String'),
   \ javaapi#method(0,'to_name(', 'String) throws InvalidName', 'NameComponent[]'),
   \ javaapi#method(0,'to_url(', 'String, String) throws InvalidAddress, InvalidName', 'String'),
   \ javaapi#method(0,'resolve_str(', 'String) throws NotFound, CannotProceed, InvalidName', 'Object'),
   \ ])
 
-call javaapi#class('NamingContextExtPOA', '', [
+call javaapi#class('NamingContextExtPOA', 'Servant', [
   \ javaapi#method(0,'NamingContextExtPOA(', ')', 'public'),
   \ javaapi#method(0,'_invoke(', 'String, InputStream, ResponseHandler)', 'OutputStream'),
   \ javaapi#method(0,'_all_interfaces(', 'POA, byte[])', 'String[]'),
   \ javaapi#method(0,'_this(', ')', 'NamingContextExt'),
   \ javaapi#method(0,'_this(', 'ORB)', 'NamingContextExt'),
+  \ ])
+
+call javaapi#namespace('org.omg.CosNaming')
+
+call javaapi#class('NamingContextHelper', '', [
+  \ javaapi#method(0,'NamingContextHelper(', ')', 'public'),
+  \ javaapi#method(1,'insert(', 'Any, NamingContext)', 'void'),
+  \ javaapi#method(1,'extract(', 'Any)', 'NamingContext'),
+  \ javaapi#method(1,'type(', ')', 'TypeCode'),
+  \ javaapi#method(1,'id(', ')', 'String'),
+  \ javaapi#method(1,'read(', 'InputStream)', 'NamingContext'),
+  \ javaapi#method(1,'write(', 'OutputStream, NamingContext)', 'void'),
+  \ javaapi#method(1,'narrow(', 'Object)', 'NamingContext'),
+  \ javaapi#method(1,'unchecked_narrow(', 'Object)', 'NamingContext'),
+  \ ])
+
+call javaapi#class('NamingContextHolder', 'Streamable', [
+  \ javaapi#field(0,'value', 'NamingContext'),
+  \ javaapi#method(0,'NamingContextHolder(', ')', 'public'),
+  \ javaapi#method(0,'NamingContextHolder(', 'NamingContext)', 'public'),
+  \ javaapi#method(0,'_read(', 'InputStream)', 'void'),
+  \ javaapi#method(0,'_write(', 'OutputStream)', 'void'),
+  \ javaapi#method(0,'_type(', ')', 'TypeCode'),
+  \ ])
+
+call javaapi#interface('NamingContextOperations', '', [
+  \ javaapi#method(0,'bind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
+  \ javaapi#method(0,'bind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
+  \ javaapi#method(0,'rebind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'rebind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'resolve(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'Object'),
+  \ javaapi#method(0,'unbind(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'list(', 'int, BindingListHolder, BindingIteratorHolder)', 'void'),
+  \ javaapi#method(0,'new_context(', ')', 'NamingContext'),
+  \ javaapi#method(0,'bind_new_context(', 'NameComponent[]) throws NotFound, AlreadyBound, CannotProceed, InvalidName', 'NamingContext'),
+  \ javaapi#method(0,'destroy(', ') throws NotEmpty', 'void'),
+  \ ])
+
+call javaapi#class('NamingContextPOA', 'Servant', [
+  \ javaapi#method(0,'NamingContextPOA(', ')', 'public'),
+  \ javaapi#method(0,'_invoke(', 'String, InputStream, ResponseHandler)', 'OutputStream'),
+  \ javaapi#method(0,'_all_interfaces(', 'POA, byte[])', 'String[]'),
+  \ javaapi#method(0,'_this(', ')', 'NamingContext'),
+  \ javaapi#method(0,'_this(', 'ORB)', 'NamingContext'),
+  \ ])
+
+call javaapi#namespace('org.omg.CosNaming')
+
+call javaapi#class('_BindingIteratorImplBase', 'DynamicImplementation', [
+  \ javaapi#method(0,'_BindingIteratorImplBase(', ')', 'public'),
+  \ javaapi#method(0,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,'invoke(', 'ServerRequest)', 'void'),
+  \ ])
+
+call javaapi#class('_BindingIteratorStub', 'ObjectImpl', [
+  \ javaapi#method(0,'_BindingIteratorStub(', ')', 'public'),
+  \ javaapi#method(0,'next_one(', 'BindingHolder)', 'boolean'),
+  \ javaapi#method(0,'next_n(', 'int, BindingListHolder)', 'boolean'),
+  \ javaapi#method(0,'destroy(', ')', 'void'),
+  \ javaapi#method(0,'_ids(', ')', 'String[]'),
+  \ ])
+
+call javaapi#class('_NamingContextExtStub', 'ObjectImpl', [
+  \ javaapi#method(0,'_NamingContextExtStub(', ')', 'public'),
+  \ javaapi#method(0,'to_string(', 'NameComponent[]) throws InvalidName', 'String'),
+  \ javaapi#method(0,'to_name(', 'String) throws InvalidName', 'NameComponent[]'),
+  \ javaapi#method(0,'to_url(', 'String, String) throws InvalidAddress, InvalidName', 'String'),
+  \ javaapi#method(0,'resolve_str(', 'String) throws NotFound, CannotProceed, InvalidName', 'Object'),
+  \ javaapi#method(0,'bind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
+  \ javaapi#method(0,'bind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
+  \ javaapi#method(0,'rebind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'rebind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'resolve(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'Object'),
+  \ javaapi#method(0,'unbind(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'list(', 'int, BindingListHolder, BindingIteratorHolder)', 'void'),
+  \ javaapi#method(0,'new_context(', ')', 'NamingContext'),
+  \ javaapi#method(0,'bind_new_context(', 'NameComponent[]) throws NotFound, AlreadyBound, CannotProceed, InvalidName', 'NamingContext'),
+  \ javaapi#method(0,'destroy(', ') throws NotEmpty', 'void'),
+  \ javaapi#method(0,'_ids(', ')', 'String[]'),
+  \ ])
+
+call javaapi#class('_NamingContextImplBase', 'DynamicImplementation', [
+  \ javaapi#method(0,'_NamingContextImplBase(', ')', 'public'),
+  \ javaapi#method(0,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,'invoke(', 'ServerRequest)', 'void'),
+  \ ])
+
+call javaapi#class('_NamingContextStub', 'ObjectImpl', [
+  \ javaapi#method(0,'_NamingContextStub(', ')', 'public'),
+  \ javaapi#method(0,'bind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
+  \ javaapi#method(0,'bind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName, AlreadyBound', 'void'),
+  \ javaapi#method(0,'rebind(', 'NameComponent[], Object) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'rebind_context(', 'NameComponent[], NamingContext) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'resolve(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'Object'),
+  \ javaapi#method(0,'unbind(', 'NameComponent[]) throws NotFound, CannotProceed, InvalidName', 'void'),
+  \ javaapi#method(0,'list(', 'int, BindingListHolder, BindingIteratorHolder)', 'void'),
+  \ javaapi#method(0,'new_context(', ')', 'NamingContext'),
+  \ javaapi#method(0,'bind_new_context(', 'NameComponent[]) throws NotFound, AlreadyBound, CannotProceed, InvalidName', 'NamingContext'),
+  \ javaapi#method(0,'destroy(', ') throws NotEmpty', 'void'),
+  \ javaapi#method(0,'_ids(', ')', 'String[]'),
   \ ])
 
