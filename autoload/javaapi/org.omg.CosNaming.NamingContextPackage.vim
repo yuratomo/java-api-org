@@ -26,7 +26,7 @@ call javaapi#class('AlreadyBoundHolder', 'Streamable', [
 
 call javaapi#class('CannotProceed', 'UserException', [
   \ javaapi#field(0,1,'cxt', 'NamingContext'),
-  \ javaapi#field(0,1,'rest_of_name', 'NameComponent[]'),
+  \ javaapi#field(0,1,'rest_of_name', 'NameComponent'),
   \ javaapi#method(0,1,'CannotProceed(', ')', ''),
   \ javaapi#method(0,1,'CannotProceed(', 'NamingContext, NameComponent[])', ''),
   \ javaapi#method(0,1,'CannotProceed(', 'String, NamingContext, NameComponent[])', ''),
@@ -101,7 +101,7 @@ call javaapi#class('NotEmptyHolder', 'Streamable', [
 
 call javaapi#class('NotFound', 'UserException', [
   \ javaapi#field(0,1,'why', 'NotFoundReason'),
-  \ javaapi#field(0,1,'rest_of_name', 'NameComponent[]'),
+  \ javaapi#field(0,1,'rest_of_name', 'NameComponent'),
   \ javaapi#method(0,1,'NotFound(', ')', ''),
   \ javaapi#method(0,1,'NotFound(', 'NotFoundReason, NameComponent[])', ''),
   \ javaapi#method(0,1,'NotFound(', 'String, NotFoundReason, NameComponent[])', ''),

@@ -23,7 +23,7 @@ call javaapi#class('CurrentHelper', '', [
 
 call javaapi#interface('CurrentOperations', 'CurrentOperations', [
   \ javaapi#method(0,1,'get_POA(', ') throws NoContext', 'POA'),
-  \ javaapi#method(0,1,'get_object_id(', ') throws NoContext', 'byte[]'),
+  \ javaapi#method(0,1,'get_object_id(', ') throws NoContext', 'byte'),
   \ ])
 
 call javaapi#namespace('org.omg.PortableServer')
@@ -174,7 +174,7 @@ call javaapi#interface('POAOperations', '', [
   \ javaapi#method(0,1,'create_request_processing_policy(', 'RequestProcessingPolicyValue)', 'RequestProcessingPolicy'),
   \ javaapi#method(0,1,'the_name(', ')', 'String'),
   \ javaapi#method(0,1,'the_parent(', ')', 'POA'),
-  \ javaapi#method(0,1,'the_children(', ')', 'POA[]'),
+  \ javaapi#method(0,1,'the_children(', ')', 'POA'),
   \ javaapi#method(0,1,'the_POAManager(', ')', 'POAManager'),
   \ javaapi#method(0,1,'the_activator(', ')', 'AdapterActivator'),
   \ javaapi#method(0,1,'the_activator(', 'AdapterActivator)', 'void'),
@@ -182,18 +182,18 @@ call javaapi#interface('POAOperations', '', [
   \ javaapi#method(0,1,'set_servant_manager(', 'ServantManager) throws WrongPolicy', 'void'),
   \ javaapi#method(0,1,'get_servant(', ') throws NoServant, WrongPolicy', 'Servant'),
   \ javaapi#method(0,1,'set_servant(', 'Servant) throws WrongPolicy', 'void'),
-  \ javaapi#method(0,1,'activate_object(', 'Servant) throws ServantAlreadyActive, WrongPolicy', 'byte[]'),
+  \ javaapi#method(0,1,'activate_object(', 'Servant) throws ServantAlreadyActive, WrongPolicy', 'byte'),
   \ javaapi#method(0,1,'activate_object_with_id(', 'byte[], Servant) throws ServantAlreadyActive, ObjectAlreadyActive, WrongPolicy', 'void'),
   \ javaapi#method(0,1,'deactivate_object(', 'byte[]) throws ObjectNotActive, WrongPolicy', 'void'),
   \ javaapi#method(0,1,'create_reference(', 'String) throws WrongPolicy', 'Object'),
   \ javaapi#method(0,1,'create_reference_with_id(', 'byte[], String)', 'Object'),
-  \ javaapi#method(0,1,'servant_to_id(', 'Servant) throws ServantNotActive, WrongPolicy', 'byte[]'),
+  \ javaapi#method(0,1,'servant_to_id(', 'Servant) throws ServantNotActive, WrongPolicy', 'byte'),
   \ javaapi#method(0,1,'servant_to_reference(', 'Servant) throws ServantNotActive, WrongPolicy', 'Object'),
   \ javaapi#method(0,1,'reference_to_servant(', 'Object) throws ObjectNotActive, WrongPolicy, WrongAdapter', 'Servant'),
-  \ javaapi#method(0,1,'reference_to_id(', 'Object) throws WrongAdapter, WrongPolicy', 'byte[]'),
+  \ javaapi#method(0,1,'reference_to_id(', 'Object) throws WrongAdapter, WrongPolicy', 'byte'),
   \ javaapi#method(0,1,'id_to_servant(', 'byte[]) throws ObjectNotActive, WrongPolicy', 'Servant'),
   \ javaapi#method(0,1,'id_to_reference(', 'byte[]) throws ObjectNotActive, WrongPolicy', 'Object'),
-  \ javaapi#method(0,1,'id(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'id(', ')', 'byte'),
   \ ])
 
 call javaapi#namespace('org.omg.PortableServer')
@@ -233,12 +233,12 @@ call javaapi#class('Servant', '', [
   \ javaapi#method(0,1,'_this_object(', 'ORB)', 'Object'),
   \ javaapi#method(0,1,'_orb(', ')', 'ORB'),
   \ javaapi#method(0,1,'_poa(', ')', 'POA'),
-  \ javaapi#method(0,1,'_object_id(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'_object_id(', ')', 'byte'),
   \ javaapi#method(0,1,'_default_POA(', ')', 'POA'),
   \ javaapi#method(0,1,'_is_a(', 'String)', 'boolean'),
   \ javaapi#method(0,1,'_non_existent(', ')', 'boolean'),
   \ javaapi#method(0,1,'_get_interface_def(', ')', 'Object'),
-  \ javaapi#method(0,1,'_all_interfaces(', 'POA, byte[])', 'String[]'),
+  \ javaapi#method(0,1,'_all_interfaces(', 'POA, byte[])', 'String'),
   \ ])
 
 call javaapi#interface('ServantActivator', 'IDLEntity', [
@@ -264,7 +264,7 @@ call javaapi#interface('ServantActivatorOperations', 'ServantManagerOperations',
 call javaapi#class('ServantActivatorPOA', 'Servant', [
   \ javaapi#method(0,1,'ServantActivatorPOA(', ')', ''),
   \ javaapi#method(0,1,'_invoke(', 'String, InputStream, ResponseHandler)', 'OutputStream'),
-  \ javaapi#method(0,1,'_all_interfaces(', 'POA, byte[])', 'String[]'),
+  \ javaapi#method(0,1,'_all_interfaces(', 'POA, byte[])', 'String'),
   \ javaapi#method(0,1,'_this(', ')', 'ServantActivator'),
   \ javaapi#method(0,1,'_this(', 'ORB)', 'ServantActivator'),
   \ ])
@@ -292,7 +292,7 @@ call javaapi#interface('ServantLocatorOperations', 'ServantManagerOperations', [
 call javaapi#class('ServantLocatorPOA', 'Servant', [
   \ javaapi#method(0,1,'ServantLocatorPOA(', ')', ''),
   \ javaapi#method(0,1,'_invoke(', 'String, InputStream, ResponseHandler)', 'OutputStream'),
-  \ javaapi#method(0,1,'_all_interfaces(', 'POA, byte[])', 'String[]'),
+  \ javaapi#method(0,1,'_all_interfaces(', 'POA, byte[])', 'String'),
   \ javaapi#method(0,1,'_this(', ')', 'ServantLocator'),
   \ javaapi#method(0,1,'_this(', 'ORB)', 'ServantLocator'),
   \ ])
@@ -348,7 +348,7 @@ call javaapi#class('_ServantActivatorStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'_ServantActivatorStub(', ')', ''),
   \ javaapi#method(0,1,'incarnate(', 'byte[], POA) throws ForwardRequest', 'Servant'),
   \ javaapi#method(0,1,'etherealize(', 'byte[], POA, Servant, boolean, boolean)', 'void'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_ServantLocatorStub', 'ObjectImpl', [
@@ -356,6 +356,6 @@ call javaapi#class('_ServantLocatorStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'_ServantLocatorStub(', ')', ''),
   \ javaapi#method(0,1,'preinvoke(', 'byte[], POA, String, CookieHolder) throws ForwardRequest', 'Servant'),
   \ javaapi#method(0,1,'postinvoke(', 'byte[], POA, String, Object, Servant)', 'void'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 

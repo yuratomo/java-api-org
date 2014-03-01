@@ -29,7 +29,7 @@ call javaapi#class('Delegate', '', [
   \ javaapi#method(0,1,'create_request(', 'Object, Context, String, NVList, NamedValue, ExceptionList, ContextList)', 'Request'),
   \ javaapi#method(0,1,'orb(', 'Object)', 'ORB'),
   \ javaapi#method(0,1,'get_policy(', 'Object, int)', 'Policy'),
-  \ javaapi#method(0,1,'get_domain_managers(', 'Object)', 'DomainManager[]'),
+  \ javaapi#method(0,1,'get_domain_managers(', 'Object)', 'DomainManager'),
   \ javaapi#method(0,1,'set_policy_override(', 'Object, Policy[], SetOverrideType)', 'Object'),
   \ javaapi#method(0,1,'is_local(', 'Object)', 'boolean'),
   \ javaapi#method(0,1,'servant_preinvoke(', 'Object, String, Class)', 'ServantObject'),
@@ -97,7 +97,7 @@ call javaapi#class('ObjectImpl', 'Object', [
   \ javaapi#method(0,1,'ObjectImpl(', ')', ''),
   \ javaapi#method(0,1,'_get_delegate(', ')', 'Delegate'),
   \ javaapi#method(0,1,'_set_delegate(', 'Delegate)', 'void'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ javaapi#method(0,1,'_duplicate(', ')', 'Object'),
   \ javaapi#method(0,1,'_release(', ')', 'void'),
   \ javaapi#method(0,1,'_is_a(', 'String)', 'boolean'),
@@ -110,7 +110,7 @@ call javaapi#class('ObjectImpl', 'Object', [
   \ javaapi#method(0,1,'_get_interface_def(', ')', 'Object'),
   \ javaapi#method(0,1,'_orb(', ')', 'ORB'),
   \ javaapi#method(0,1,'_get_policy(', 'int)', 'Policy'),
-  \ javaapi#method(0,1,'_get_domain_managers(', ')', 'DomainManager[]'),
+  \ javaapi#method(0,1,'_get_domain_managers(', ')', 'DomainManager'),
   \ javaapi#method(0,1,'_set_policy_override(', 'Policy[], SetOverrideType)', 'Object'),
   \ javaapi#method(0,1,'_is_local(', ')', 'boolean'),
   \ javaapi#method(0,1,'_servant_preinvoke(', 'String, Class)', 'ServantObject'),
@@ -191,7 +191,7 @@ call javaapi#class('UnknownException', 'SystemException', [
   \ ])
 
 call javaapi#interface('ValueBase', 'IDLEntity', [
-  \ javaapi#method(0,1,'_truncatable_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_truncatable_ids(', ')', 'String'),
   \ ])
 
 call javaapi#interface('ValueFactory', '', [

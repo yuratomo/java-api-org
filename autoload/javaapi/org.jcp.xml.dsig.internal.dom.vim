@@ -159,8 +159,8 @@ call javaapi#class('DOMPGPData', 'DOMStructure', [
   \ javaapi#method(0,1,'DOMPGPData(', 'byte[], List)', ''),
   \ javaapi#method(0,1,'DOMPGPData(', 'byte[], byte[], List)', ''),
   \ javaapi#method(0,1,'DOMPGPData(', 'Element) throws MarshalException', ''),
-  \ javaapi#method(0,1,'getKeyId(', ')', 'byte[]'),
-  \ javaapi#method(0,1,'getKeyPacket(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'getKeyId(', ')', 'byte'),
+  \ javaapi#method(0,1,'getKeyPacket(', ')', 'byte'),
   \ javaapi#method(0,1,'getExternalElements(', ')', 'List'),
   \ javaapi#method(0,1,'marshal(', 'Node, String, DOMCryptoContext) throws MarshalException', 'void'),
   \ ])
@@ -175,8 +175,8 @@ call javaapi#class('DOMReference', 'DOMStructure', [
   \ javaapi#method(0,1,'getURI(', ')', 'String'),
   \ javaapi#method(0,1,'getType(', ')', 'String'),
   \ javaapi#method(0,1,'getTransforms(', ')', 'List'),
-  \ javaapi#method(0,1,'getDigestValue(', ')', 'byte[]'),
-  \ javaapi#method(0,1,'getCalculatedDigestValue(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'getDigestValue(', ')', 'byte'),
+  \ javaapi#method(0,1,'getCalculatedDigestValue(', ')', 'byte'),
   \ javaapi#method(0,1,'marshal(', 'Node, String, DOMCryptoContext) throws MarshalException', 'void'),
   \ javaapi#method(0,1,'digest(', 'XMLSignContext) throws XMLSignatureException', 'void'),
   \ javaapi#method(0,1,'validate(', 'XMLValidateContext) throws XMLSignatureException', 'boolean'),
@@ -378,7 +378,7 @@ call javaapi#class('DOMXSLTTransform', 'ApacheTransform', [
   \ ])
 
 call javaapi#class('Utils', '', [
-  \ javaapi#method(1,1,'readBytesFromStream(', 'InputStream) throws IOException', 'byte[]'),
+  \ javaapi#method(1,1,'readBytesFromStream(', 'InputStream) throws IOException', 'byte'),
   \ javaapi#method(1,1,'parseIdFromSameDocumentURI(', 'String)', 'String'),
   \ javaapi#method(1,1,'sameDocumentURI(', 'String)', 'boolean'),
   \ ])

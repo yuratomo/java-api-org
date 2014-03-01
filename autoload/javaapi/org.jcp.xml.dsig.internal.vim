@@ -6,7 +6,7 @@ call javaapi#class('DigesterOutputStream', 'OutputStream', [
   \ javaapi#method(0,1,'write(', 'byte[])', 'void'),
   \ javaapi#method(0,1,'write(', 'int)', 'void'),
   \ javaapi#method(0,1,'write(', 'byte[], int, int)', 'void'),
-  \ javaapi#method(0,1,'getDigestValue(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'getDigestValue(', ')', 'byte'),
   \ javaapi#method(0,1,'getInputStream(', ')', 'InputStream'),
   \ ])
 

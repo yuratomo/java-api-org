@@ -29,9 +29,9 @@ call javaapi#interface('CodecFactoryOperations', '', [
 call javaapi#namespace('org.omg.IOP')
 
 call javaapi#interface('CodecOperations', '', [
-  \ javaapi#method(0,1,'encode(', 'Any) throws InvalidTypeForEncoding', 'byte[]'),
+  \ javaapi#method(0,1,'encode(', 'Any) throws InvalidTypeForEncoding', 'byte'),
   \ javaapi#method(0,1,'decode(', 'byte[]) throws FormatMismatch', 'Any'),
-  \ javaapi#method(0,1,'encode_value(', 'Any) throws InvalidTypeForEncoding', 'byte[]'),
+  \ javaapi#method(0,1,'encode_value(', 'Any) throws InvalidTypeForEncoding', 'byte'),
   \ javaapi#method(0,1,'decode_value(', 'byte[], TypeCode) throws FormatMismatch, TypeMismatch', 'Any'),
   \ ])
 
@@ -65,7 +65,7 @@ call javaapi#interface('ExceptionDetailMessage', '', [
 
 call javaapi#class('IOR', 'IDLEntity', [
   \ javaapi#field(0,1,'type_id', 'String'),
-  \ javaapi#field(0,1,'profiles', 'TaggedProfile[]'),
+  \ javaapi#field(0,1,'profiles', 'TaggedProfile'),
   \ javaapi#method(0,1,'IOR(', ')', ''),
   \ javaapi#method(0,1,'IOR(', 'String, TaggedProfile[])', ''),
   \ ])
@@ -92,15 +92,15 @@ call javaapi#class('IORHolder', 'Streamable', [
 call javaapi#class('MultipleComponentProfileHelper', '', [
   \ javaapi#method(0,1,'MultipleComponentProfileHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, TaggedComponent[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'TaggedComponent[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'TaggedComponent'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'TaggedComponent[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'TaggedComponent'),
   \ javaapi#method(1,1,'write(', 'OutputStream, TaggedComponent[])', 'void'),
   \ ])
 
 call javaapi#class('MultipleComponentProfileHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'TaggedComponent[]'),
+  \ javaapi#field(0,1,'value', 'TaggedComponent'),
   \ javaapi#method(0,1,'MultipleComponentProfileHolder(', ')', ''),
   \ javaapi#method(0,1,'MultipleComponentProfileHolder(', 'TaggedComponent[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -124,7 +124,7 @@ call javaapi#interface('RMICustomMaxStreamFormat', '', [
 
 call javaapi#class('ServiceContext', 'IDLEntity', [
   \ javaapi#field(0,1,'context_id', 'int'),
-  \ javaapi#field(0,1,'context_data', 'byte[]'),
+  \ javaapi#field(0,1,'context_data', 'byte'),
   \ javaapi#method(0,1,'ServiceContext(', ')', ''),
   \ javaapi#method(0,1,'ServiceContext(', 'int, byte[])', ''),
   \ ])
@@ -151,15 +151,15 @@ call javaapi#class('ServiceContextHolder', 'Streamable', [
 call javaapi#class('ServiceContextListHelper', '', [
   \ javaapi#method(0,1,'ServiceContextListHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, ServiceContext[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'ServiceContext[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'ServiceContext'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'ServiceContext[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'ServiceContext'),
   \ javaapi#method(1,1,'write(', 'OutputStream, ServiceContext[])', 'void'),
   \ ])
 
 call javaapi#class('ServiceContextListHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'ServiceContext[]'),
+  \ javaapi#field(0,1,'value', 'ServiceContext'),
   \ javaapi#method(0,1,'ServiceContextListHolder(', ')', ''),
   \ javaapi#method(0,1,'ServiceContextListHolder(', 'ServiceContext[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -211,7 +211,7 @@ call javaapi#interface('TAG_RMI_CUSTOM_MAX_STREAM_FORMAT', '', [
 
 call javaapi#class('TaggedComponent', 'IDLEntity', [
   \ javaapi#field(0,1,'tag', 'int'),
-  \ javaapi#field(0,1,'component_data', 'byte[]'),
+  \ javaapi#field(0,1,'component_data', 'byte'),
   \ javaapi#method(0,1,'TaggedComponent(', ')', ''),
   \ javaapi#method(0,1,'TaggedComponent(', 'int, byte[])', ''),
   \ ])
@@ -237,7 +237,7 @@ call javaapi#class('TaggedComponentHolder', 'Streamable', [
 
 call javaapi#class('TaggedProfile', 'IDLEntity', [
   \ javaapi#field(0,1,'tag', 'int'),
-  \ javaapi#field(0,1,'profile_data', 'byte[]'),
+  \ javaapi#field(0,1,'profile_data', 'byte'),
   \ javaapi#method(0,1,'TaggedProfile(', ')', ''),
   \ javaapi#method(0,1,'TaggedProfile(', 'int, byte[])', ''),
   \ ])

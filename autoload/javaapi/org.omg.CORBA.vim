@@ -94,15 +94,15 @@ call javaapi#class('AnyHolder', 'Streamable', [
 call javaapi#class('AnySeqHelper', '', [
   \ javaapi#method(0,1,'AnySeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, Any[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'Any[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'Any'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'Any[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'Any'),
   \ javaapi#method(1,1,'write(', 'OutputStream, Any[])', 'void'),
   \ ])
 
 call javaapi#class('AnySeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'Any[]'),
+  \ javaapi#field(0,1,'value', 'Any'),
   \ javaapi#method(0,1,'AnySeqHolder(', ')', ''),
   \ javaapi#method(0,1,'AnySeqHolder(', 'Any[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -176,15 +176,15 @@ call javaapi#class('BooleanHolder', 'Streamable', [
 call javaapi#class('BooleanSeqHelper', '', [
   \ javaapi#method(0,1,'BooleanSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, boolean[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'boolean[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'boolean'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'boolean[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'boolean'),
   \ javaapi#method(1,1,'write(', 'OutputStream, boolean[])', 'void'),
   \ ])
 
 call javaapi#class('BooleanSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'boolean[]'),
+  \ javaapi#field(0,1,'value', 'boolean'),
   \ javaapi#method(0,1,'BooleanSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'BooleanSeqHolder(', 'boolean[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -236,15 +236,15 @@ call javaapi#class('CharHolder', 'Streamable', [
 call javaapi#class('CharSeqHelper', '', [
   \ javaapi#method(0,1,'CharSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, char[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'char[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'char'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'char[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'char'),
   \ javaapi#method(1,1,'write(', 'OutputStream, char[])', 'void'),
   \ ])
 
 call javaapi#class('CharSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'char[]'),
+  \ javaapi#field(0,1,'value', 'char'),
   \ javaapi#method(0,1,'CharSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'CharSeqHolder(', 'char[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -485,15 +485,15 @@ call javaapi#class('DoubleHolder', 'Streamable', [
 call javaapi#class('DoubleSeqHelper', '', [
   \ javaapi#method(0,1,'DoubleSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, double[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'double[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'double'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'double[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'double'),
   \ javaapi#method(1,1,'write(', 'OutputStream, double[])', 'void'),
   \ ])
 
 call javaapi#class('DoubleSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'double[]'),
+  \ javaapi#field(0,1,'value', 'double'),
   \ javaapi#method(0,1,'DoubleSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'DoubleSeqHolder(', 'double[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -553,7 +553,7 @@ call javaapi#interface('DynAny', 'Object', [
 call javaapi#namespace('org.omg.CORBA')
 
 call javaapi#interface('DynArray', 'DynAny', [
-  \ javaapi#method(0,1,'get_elements(', ')', 'Any[]'),
+  \ javaapi#method(0,1,'get_elements(', ')', 'Any'),
   \ javaapi#method(0,1,'set_elements(', 'Any[]) throws InvalidSeq', 'void'),
   \ ])
 
@@ -565,21 +565,21 @@ call javaapi#interface('DynEnum', 'DynAny', [
   \ ])
 
 call javaapi#interface('DynFixed', 'DynAny', [
-  \ javaapi#method(0,1,'get_value(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'get_value(', ')', 'byte'),
   \ javaapi#method(0,1,'set_value(', 'byte[]) throws InvalidValue', 'void'),
   \ ])
 
 call javaapi#interface('DynSequence', 'DynAny', [
   \ javaapi#method(0,1,'length(', ')', 'int'),
   \ javaapi#method(0,1,'length(', 'int)', 'void'),
-  \ javaapi#method(0,1,'get_elements(', ')', 'Any[]'),
+  \ javaapi#method(0,1,'get_elements(', ')', 'Any'),
   \ javaapi#method(0,1,'set_elements(', 'Any[]) throws InvalidSeq', 'void'),
   \ ])
 
 call javaapi#interface('DynStruct', 'DynAny', [
   \ javaapi#method(0,1,'current_member_name(', ')', 'String'),
   \ javaapi#method(0,1,'current_member_kind(', ')', 'TCKind'),
-  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair[]'),
+  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair'),
   \ javaapi#method(0,1,'set_members(', 'NameValuePair[]) throws InvalidSeq', 'void'),
   \ ])
 
@@ -597,14 +597,14 @@ call javaapi#interface('DynUnion', 'DynAny', [
 call javaapi#interface('DynValue', 'DynAny', [
   \ javaapi#method(0,1,'current_member_name(', ')', 'String'),
   \ javaapi#method(0,1,'current_member_kind(', ')', 'TCKind'),
-  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair[]'),
+  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair'),
   \ javaapi#method(0,1,'set_members(', 'NameValuePair[]) throws InvalidSeq', 'void'),
   \ ])
 
 call javaapi#class('DynamicImplementation', 'ObjectImpl', [
   \ javaapi#method(0,1,'DynamicImplementation(', ')', ''),
   \ javaapi#method(0,1,'invoke(', 'ServerRequest)', 'void'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('Environment', '', [
@@ -660,15 +660,15 @@ call javaapi#class('FloatHolder', 'Streamable', [
 call javaapi#class('FloatSeqHelper', '', [
   \ javaapi#method(0,1,'FloatSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, float[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'float[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'float'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'float[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'float'),
   \ javaapi#method(1,1,'write(', 'OutputStream, float[])', 'void'),
   \ ])
 
 call javaapi#class('FloatSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'float[]'),
+  \ javaapi#field(0,1,'value', 'float'),
   \ javaapi#method(0,1,'FloatSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'FloatSeqHolder(', 'float[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -806,7 +806,7 @@ call javaapi#class('LocalObject', 'Object', [
   \ javaapi#method(0,1,'_get_interface_def(', ')', 'Object'),
   \ javaapi#method(0,1,'_orb(', ')', 'ORB'),
   \ javaapi#method(0,1,'_get_policy(', 'int)', 'Policy'),
-  \ javaapi#method(0,1,'_get_domain_managers(', ')', 'DomainManager[]'),
+  \ javaapi#method(0,1,'_get_domain_managers(', ')', 'DomainManager'),
   \ javaapi#method(0,1,'_set_policy_override(', 'Policy[], SetOverrideType)', 'Object'),
   \ javaapi#method(0,1,'_is_local(', ')', 'boolean'),
   \ javaapi#method(0,1,'_servant_preinvoke(', 'String, Class)', 'ServantObject'),
@@ -829,15 +829,15 @@ call javaapi#class('LongHolder', 'Streamable', [
 call javaapi#class('LongLongSeqHelper', '', [
   \ javaapi#method(0,1,'LongLongSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, long[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'long[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'long'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'long[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'long'),
   \ javaapi#method(1,1,'write(', 'OutputStream, long[])', 'void'),
   \ ])
 
 call javaapi#class('LongLongSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'long[]'),
+  \ javaapi#field(0,1,'value', 'long'),
   \ javaapi#method(0,1,'LongLongSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'LongLongSeqHolder(', 'long[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -848,15 +848,15 @@ call javaapi#class('LongLongSeqHolder', 'Streamable', [
 call javaapi#class('LongSeqHelper', '', [
   \ javaapi#method(0,1,'LongSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, int[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'int[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'int'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'int[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'int'),
   \ javaapi#method(1,1,'write(', 'OutputStream, int[])', 'void'),
   \ ])
 
 call javaapi#class('LongSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'int[]'),
+  \ javaapi#field(0,1,'value', 'int'),
   \ javaapi#method(0,1,'LongSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'LongSeqHolder(', 'int[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -968,7 +968,7 @@ call javaapi#class('ORB', '', [
   \ javaapi#method(0,1,'connect(', 'Object)', 'void'),
   \ javaapi#method(0,1,'destroy(', ')', 'void'),
   \ javaapi#method(0,1,'disconnect(', 'Object)', 'void'),
-  \ javaapi#method(0,1,'list_initial_services(', ')', 'String[]'),
+  \ javaapi#method(0,1,'list_initial_services(', ')', 'String'),
   \ javaapi#method(0,1,'resolve_initial_references(', 'String) throws InvalidName', 'Object'),
   \ javaapi#method(0,1,'object_to_string(', 'Object)', 'String'),
   \ javaapi#method(0,1,'string_to_object(', 'String)', 'Object'),
@@ -1033,7 +1033,7 @@ call javaapi#interface('Object', '', [
   \ javaapi#method(0,1,'_create_request(', 'Context, String, NVList, NamedValue)', 'Request'),
   \ javaapi#method(0,1,'_create_request(', 'Context, String, NVList, NamedValue, ExceptionList, ContextList)', 'Request'),
   \ javaapi#method(0,1,'_get_policy(', 'int)', 'Policy'),
-  \ javaapi#method(0,1,'_get_domain_managers(', ')', 'DomainManager[]'),
+  \ javaapi#method(0,1,'_get_domain_managers(', ')', 'DomainManager'),
   \ javaapi#method(0,1,'_set_policy_override(', 'Policy[], SetOverrideType)', 'Object'),
   \ ])
 
@@ -1059,15 +1059,15 @@ call javaapi#class('ObjectHolder', 'Streamable', [
 call javaapi#class('OctetSeqHelper', '', [
   \ javaapi#method(0,1,'OctetSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, byte[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'byte[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'byte'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'byte[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'byte'),
   \ javaapi#method(1,1,'write(', 'OutputStream, byte[])', 'void'),
   \ ])
 
 call javaapi#class('OctetSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'byte[]'),
+  \ javaapi#field(0,1,'value', 'byte'),
   \ javaapi#method(0,1,'OctetSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'OctetSeqHolder(', 'byte[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1183,15 +1183,15 @@ call javaapi#class('PolicyHolder', 'Streamable', [
 call javaapi#class('PolicyListHelper', '', [
   \ javaapi#method(0,1,'PolicyListHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, Policy[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'Policy[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'Policy'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'Policy[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'Policy'),
   \ javaapi#method(1,1,'write(', 'OutputStream, Policy[])', 'void'),
   \ ])
 
 call javaapi#class('PolicyListHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'Policy[]'),
+  \ javaapi#field(0,1,'value', 'Policy'),
   \ javaapi#method(0,1,'PolicyListHolder(', ')', ''),
   \ javaapi#method(0,1,'PolicyListHolder(', 'Policy[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1218,7 +1218,7 @@ call javaapi#class('PolicyTypeHelper', '', [
 call javaapi#class('Principal', '', [
   \ javaapi#method(0,1,'Principal(', ')', ''),
   \ javaapi#method(0,1,'name(', 'byte[])', 'void'),
-  \ javaapi#method(0,1,'name(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'name(', ')', 'byte'),
   \ ])
 
 call javaapi#class('PrincipalHolder', 'Streamable', [
@@ -1288,7 +1288,7 @@ call javaapi#class('ServerRequest', '', [
 
 call javaapi#class('ServiceDetail', 'IDLEntity', [
   \ javaapi#field(0,1,'service_detail_type', 'int'),
-  \ javaapi#field(0,1,'service_detail', 'byte[]'),
+  \ javaapi#field(0,1,'service_detail', 'byte'),
   \ javaapi#method(0,1,'ServiceDetail(', ')', ''),
   \ javaapi#method(0,1,'ServiceDetail(', 'int, byte[])', ''),
   \ ])
@@ -1304,8 +1304,8 @@ call javaapi#class('ServiceDetailHelper', '', [
   \ ])
 
 call javaapi#class('ServiceInformation', 'IDLEntity', [
-  \ javaapi#field(0,1,'service_options', 'int[]'),
-  \ javaapi#field(0,1,'service_details', 'ServiceDetail[]'),
+  \ javaapi#field(0,1,'service_options', 'int'),
+  \ javaapi#field(0,1,'service_details', 'ServiceDetail'),
   \ javaapi#method(0,1,'ServiceInformation(', ')', ''),
   \ javaapi#method(0,1,'ServiceInformation(', 'int[], ServiceDetail[])', ''),
   \ ])
@@ -1361,15 +1361,15 @@ call javaapi#class('ShortHolder', 'Streamable', [
 call javaapi#class('ShortSeqHelper', '', [
   \ javaapi#method(0,1,'ShortSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, short[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'short[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'short'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'short[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'short'),
   \ javaapi#method(1,1,'write(', 'OutputStream, short[])', 'void'),
   \ ])
 
 call javaapi#class('ShortSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'short[]'),
+  \ javaapi#field(0,1,'value', 'short'),
   \ javaapi#method(0,1,'ShortSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'ShortSeqHolder(', 'short[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1389,15 +1389,15 @@ call javaapi#class('StringHolder', 'Streamable', [
 call javaapi#class('StringSeqHelper', '', [
   \ javaapi#method(0,1,'StringSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, String[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'String[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'String'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'String[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'String'),
   \ javaapi#method(1,1,'write(', 'OutputStream, String[])', 'void'),
   \ ])
 
 call javaapi#class('StringSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'String[]'),
+  \ javaapi#field(0,1,'value', 'String'),
   \ javaapi#method(0,1,'StringSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'StringSeqHolder(', 'String[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1594,15 +1594,15 @@ call javaapi#namespace('org.omg.CORBA')
 call javaapi#class('ULongLongSeqHelper', '', [
   \ javaapi#method(0,1,'ULongLongSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, long[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'long[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'long'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'long[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'long'),
   \ javaapi#method(1,1,'write(', 'OutputStream, long[])', 'void'),
   \ ])
 
 call javaapi#class('ULongLongSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'long[]'),
+  \ javaapi#field(0,1,'value', 'long'),
   \ javaapi#method(0,1,'ULongLongSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'ULongLongSeqHolder(', 'long[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1613,15 +1613,15 @@ call javaapi#class('ULongLongSeqHolder', 'Streamable', [
 call javaapi#class('ULongSeqHelper', '', [
   \ javaapi#method(0,1,'ULongSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, int[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'int[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'int'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'int[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'int'),
   \ javaapi#method(1,1,'write(', 'OutputStream, int[])', 'void'),
   \ ])
 
 call javaapi#class('ULongSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'int[]'),
+  \ javaapi#field(0,1,'value', 'int'),
   \ javaapi#method(0,1,'ULongSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'ULongSeqHolder(', 'int[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1647,15 +1647,15 @@ call javaapi#interface('UNSUPPORTED_POLICY_VALUE', '', [
 call javaapi#class('UShortSeqHelper', '', [
   \ javaapi#method(0,1,'UShortSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, short[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'short[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'short'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'short[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'short'),
   \ javaapi#method(1,1,'write(', 'OutputStream, short[])', 'void'),
   \ ])
 
 call javaapi#class('UShortSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'short[]'),
+  \ javaapi#field(0,1,'value', 'short'),
   \ javaapi#method(0,1,'UShortSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'UShortSeqHolder(', 'short[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1792,15 +1792,15 @@ call javaapi#class('VisibilityHelper', '', [
 call javaapi#class('WCharSeqHelper', '', [
   \ javaapi#method(0,1,'WCharSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, char[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'char[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'char'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'char[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'char'),
   \ javaapi#method(1,1,'write(', 'OutputStream, char[])', 'void'),
   \ ])
 
 call javaapi#class('WCharSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'char[]'),
+  \ javaapi#field(0,1,'value', 'char'),
   \ javaapi#method(0,1,'WCharSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'WCharSeqHolder(', 'char[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1811,15 +1811,15 @@ call javaapi#class('WCharSeqHolder', 'Streamable', [
 call javaapi#class('WStringSeqHelper', '', [
   \ javaapi#method(0,1,'WStringSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, String[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'String[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'String'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'String[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'String'),
   \ javaapi#method(1,1,'write(', 'OutputStream, String[])', 'void'),
   \ ])
 
 call javaapi#class('WStringSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'String[]'),
+  \ javaapi#field(0,1,'value', 'String'),
   \ javaapi#method(0,1,'WStringSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'WStringSeqHolder(', 'String[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -1870,7 +1870,7 @@ call javaapi#class('_IDLTypeStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(0,1,'def_kind(', ')', 'DefinitionKind'),
   \ javaapi#method(0,1,'destroy(', ')', 'void'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_PolicyStub', 'ObjectImpl', [
@@ -1879,6 +1879,6 @@ call javaapi#class('_PolicyStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'policy_type(', ')', 'int'),
   \ javaapi#method(0,1,'copy(', ')', 'Policy'),
   \ javaapi#method(0,1,'destroy(', ')', 'void'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 

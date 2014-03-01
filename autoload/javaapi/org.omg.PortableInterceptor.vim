@@ -17,10 +17,10 @@ call javaapi#class('AdapterManagerIdHelper', '', [
 call javaapi#class('AdapterNameHelper', '', [
   \ javaapi#method(0,1,'AdapterNameHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, String[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'String[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'String'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'String[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'String'),
   \ javaapi#method(1,1,'write(', 'OutputStream, String[])', 'void'),
   \ ])
 
@@ -44,7 +44,7 @@ call javaapi#interface('ClientRequestInfoOperations', 'RequestInfoOperations', [
   \ javaapi#method(0,1,'received_exception(', ')', 'Any'),
   \ javaapi#method(0,1,'received_exception_id(', ')', 'String'),
   \ javaapi#method(0,1,'get_effective_component(', 'int)', 'TaggedComponent'),
-  \ javaapi#method(0,1,'get_effective_components(', 'int)', 'TaggedComponent[]'),
+  \ javaapi#method(0,1,'get_effective_components(', 'int)', 'TaggedComponent'),
   \ javaapi#method(0,1,'get_request_policy(', 'int)', 'Policy'),
   \ javaapi#method(0,1,'add_request_service_context(', 'ServiceContext, boolean)', 'void'),
   \ ])
@@ -205,7 +205,7 @@ call javaapi#interface('ORBInitInfo', 'IDLEntity', [
   \ ])
 
 call javaapi#interface('ORBInitInfoOperations', '', [
-  \ javaapi#method(0,1,'arguments(', ')', 'String[]'),
+  \ javaapi#method(0,1,'arguments(', ')', 'String'),
   \ javaapi#method(0,1,'orb_id(', ')', 'String'),
   \ javaapi#method(0,1,'codec_factory(', ')', 'CodecFactory'),
   \ javaapi#method(0,1,'register_initial_reference(', 'String, Object) throws InvalidName', 'void'),
@@ -230,10 +230,10 @@ call javaapi#interface('ORBInitializerOperations', '', [
 call javaapi#class('ObjectIdHelper', '', [
   \ javaapi#method(0,1,'ObjectIdHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, byte[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'byte[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'byte'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'byte[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'byte'),
   \ javaapi#method(1,1,'write(', 'OutputStream, byte[])', 'void'),
   \ ])
 
@@ -263,7 +263,7 @@ call javaapi#class('ObjectReferenceFactoryHolder', 'Streamable', [
 call javaapi#interface('ObjectReferenceTemplate', 'ObjectReferenceFactory', [
   \ javaapi#method(0,1,'server_id(', ')', 'String'),
   \ javaapi#method(0,1,'orb_id(', ')', 'String'),
-  \ javaapi#method(0,1,'adapter_name(', ')', 'String[]'),
+  \ javaapi#method(0,1,'adapter_name(', ')', 'String'),
   \ ])
 
 call javaapi#class('ObjectReferenceTemplateHelper', '', [
@@ -288,15 +288,15 @@ call javaapi#class('ObjectReferenceTemplateHolder', 'Streamable', [
 call javaapi#class('ObjectReferenceTemplateSeqHelper', '', [
   \ javaapi#method(0,1,'ObjectReferenceTemplateSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, ObjectReferenceTemplate[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'ObjectReferenceTemplate[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'ObjectReferenceTemplate'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'ObjectReferenceTemplate[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'ObjectReferenceTemplate'),
   \ javaapi#method(1,1,'write(', 'OutputStream, ObjectReferenceTemplate[])', 'void'),
   \ ])
 
 call javaapi#class('ObjectReferenceTemplateSeqHolder', 'Streamable', [
-  \ javaapi#field(0,1,'value', 'ObjectReferenceTemplate[]'),
+  \ javaapi#field(0,1,'value', 'ObjectReferenceTemplate'),
   \ javaapi#method(0,1,'ObjectReferenceTemplateSeqHolder(', ')', ''),
   \ javaapi#method(0,1,'ObjectReferenceTemplateSeqHolder(', 'ObjectReferenceTemplate[])', ''),
   \ javaapi#method(0,1,'_read(', 'InputStream)', 'void'),
@@ -317,10 +317,10 @@ call javaapi#interface('RequestInfo', 'IDLEntity', [
 call javaapi#interface('RequestInfoOperations', '', [
   \ javaapi#method(0,1,'request_id(', ')', 'int'),
   \ javaapi#method(0,1,'operation(', ')', 'String'),
-  \ javaapi#method(0,1,'arguments(', ')', 'Parameter[]'),
-  \ javaapi#method(0,1,'exceptions(', ')', 'TypeCode[]'),
-  \ javaapi#method(0,1,'contexts(', ')', 'String[]'),
-  \ javaapi#method(0,1,'operation_context(', ')', 'String[]'),
+  \ javaapi#method(0,1,'arguments(', ')', 'Parameter'),
+  \ javaapi#method(0,1,'exceptions(', ')', 'TypeCode'),
+  \ javaapi#method(0,1,'contexts(', ')', 'String'),
+  \ javaapi#method(0,1,'operation_context(', ')', 'String'),
   \ javaapi#method(0,1,'result(', ')', 'Any'),
   \ javaapi#method(0,1,'response_expected(', ')', 'boolean'),
   \ javaapi#method(0,1,'sync_scope(', ')', 'short'),
@@ -354,11 +354,11 @@ call javaapi#interface('ServerRequestInfo', 'IDLEntity', [
 
 call javaapi#interface('ServerRequestInfoOperations', 'RequestInfoOperations', [
   \ javaapi#method(0,1,'sending_exception(', ')', 'Any'),
-  \ javaapi#method(0,1,'object_id(', ')', 'byte[]'),
-  \ javaapi#method(0,1,'adapter_id(', ')', 'byte[]'),
+  \ javaapi#method(0,1,'object_id(', ')', 'byte'),
+  \ javaapi#method(0,1,'adapter_id(', ')', 'byte'),
   \ javaapi#method(0,1,'server_id(', ')', 'String'),
   \ javaapi#method(0,1,'orb_id(', ')', 'String'),
-  \ javaapi#method(0,1,'adapter_name(', ')', 'String[]'),
+  \ javaapi#method(0,1,'adapter_name(', ')', 'String'),
   \ javaapi#method(0,1,'target_most_derived_interface(', ')', 'String'),
   \ javaapi#method(0,1,'get_server_policy(', 'int)', 'Policy'),
   \ javaapi#method(0,1,'set_slot(', 'int, Any) throws InvalidSlot', 'void'),

@@ -3,10 +3,10 @@ call javaapi#namespace('org.omg.DynamicAny')
 call javaapi#class('AnySeqHelper', '', [
   \ javaapi#method(0,1,'AnySeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, Any[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'Any[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'Any'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'Any[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'Any'),
   \ javaapi#method(1,1,'write(', 'OutputStream, Any[])', 'void'),
   \ ])
 
@@ -105,10 +105,10 @@ call javaapi#namespace('org.omg.DynamicAny')
 call javaapi#class('DynAnySeqHelper', '', [
   \ javaapi#method(0,1,'DynAnySeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, DynAny[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'DynAny[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'DynAny'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'DynAny[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'DynAny'),
   \ javaapi#method(1,1,'write(', 'OutputStream, DynAny[])', 'void'),
   \ ])
 
@@ -128,9 +128,9 @@ call javaapi#class('DynArrayHelper', '', [
   \ ])
 
 call javaapi#interface('DynArrayOperations', 'DynAnyOperations', [
-  \ javaapi#method(0,1,'get_elements(', ')', 'Any[]'),
+  \ javaapi#method(0,1,'get_elements(', ')', 'Any'),
   \ javaapi#method(0,1,'set_elements(', 'Any[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny[]'),
+  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny'),
   \ javaapi#method(0,1,'set_elements_as_dyn_any(', 'DynAny[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
@@ -194,9 +194,9 @@ call javaapi#class('DynSequenceHelper', '', [
 call javaapi#interface('DynSequenceOperations', 'DynAnyOperations', [
   \ javaapi#method(0,1,'get_length(', ')', 'int'),
   \ javaapi#method(0,1,'set_length(', 'int) throws InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_elements(', ')', 'Any[]'),
+  \ javaapi#method(0,1,'get_elements(', ')', 'Any'),
   \ javaapi#method(0,1,'set_elements(', 'Any[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny[]'),
+  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny'),
   \ javaapi#method(0,1,'set_elements_as_dyn_any(', 'DynAny[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
@@ -218,9 +218,9 @@ call javaapi#class('DynStructHelper', '', [
 call javaapi#interface('DynStructOperations', 'DynAnyOperations', [
   \ javaapi#method(0,1,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
   \ javaapi#method(0,1,'current_member_kind(', ') throws TypeMismatch, InvalidValue', 'TCKind'),
-  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair[]'),
+  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair'),
   \ javaapi#method(0,1,'set_members(', 'NameValuePair[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_members_as_dyn_any(', ')', 'NameDynAnyPair[]'),
+  \ javaapi#method(0,1,'get_members_as_dyn_any(', ')', 'NameDynAnyPair'),
   \ javaapi#method(0,1,'set_members_as_dyn_any(', 'NameDynAnyPair[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
@@ -288,9 +288,9 @@ call javaapi#class('DynValueHelper', '', [
 call javaapi#interface('DynValueOperations', 'DynValueCommonOperations', [
   \ javaapi#method(0,1,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
   \ javaapi#method(0,1,'current_member_kind(', ') throws TypeMismatch, InvalidValue', 'TCKind'),
-  \ javaapi#method(0,1,'get_members(', ') throws InvalidValue', 'NameValuePair[]'),
+  \ javaapi#method(0,1,'get_members(', ') throws InvalidValue', 'NameValuePair'),
   \ javaapi#method(0,1,'set_members(', 'NameValuePair[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_members_as_dyn_any(', ') throws InvalidValue', 'NameDynAnyPair[]'),
+  \ javaapi#method(0,1,'get_members_as_dyn_any(', ') throws InvalidValue', 'NameDynAnyPair'),
   \ javaapi#method(0,1,'set_members_as_dyn_any(', 'NameDynAnyPair[]) throws TypeMismatch, InvalidValue', 'void'),
   \ ])
 
@@ -324,10 +324,10 @@ call javaapi#class('NameDynAnyPairHelper', '', [
 call javaapi#class('NameDynAnyPairSeqHelper', '', [
   \ javaapi#method(0,1,'NameDynAnyPairSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, NameDynAnyPair[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'NameDynAnyPair[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'NameDynAnyPair'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'NameDynAnyPair[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'NameDynAnyPair'),
   \ javaapi#method(1,1,'write(', 'OutputStream, NameDynAnyPair[])', 'void'),
   \ ])
 
@@ -351,10 +351,10 @@ call javaapi#class('NameValuePairHelper', '', [
 call javaapi#class('NameValuePairSeqHelper', '', [
   \ javaapi#method(0,1,'NameValuePairSeqHelper(', ')', ''),
   \ javaapi#method(1,1,'insert(', 'Any, NameValuePair[])', 'void'),
-  \ javaapi#method(1,1,'extract(', 'Any)', 'NameValuePair[]'),
+  \ javaapi#method(1,1,'extract(', 'Any)', 'NameValuePair'),
   \ javaapi#method(1,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(1,1,'id(', ')', 'String'),
-  \ javaapi#method(1,1,'read(', 'InputStream)', 'NameValuePair[]'),
+  \ javaapi#method(1,1,'read(', 'InputStream)', 'NameValuePair'),
   \ javaapi#method(1,1,'write(', 'OutputStream, NameValuePair[])', 'void'),
   \ ])
 
@@ -363,7 +363,7 @@ call javaapi#class('_DynAnyFactoryStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'_DynAnyFactoryStub(', ')', ''),
   \ javaapi#method(0,1,'create_dyn_any(', 'Any) throws InconsistentTypeCode', 'DynAny'),
   \ javaapi#method(0,1,'create_dyn_any_from_type_code(', 'TypeCode) throws InconsistentTypeCode', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynAnyStub', 'ObjectImpl', [
@@ -419,15 +419,15 @@ call javaapi#class('_DynAnyStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynArrayStub', 'ObjectImpl', [
   \ javaapi#field(1,1,'_opsClass', 'Class'),
   \ javaapi#method(0,1,'_DynArrayStub(', ')', ''),
-  \ javaapi#method(0,1,'get_elements(', ')', 'Any[]'),
+  \ javaapi#method(0,1,'get_elements(', ')', 'Any'),
   \ javaapi#method(0,1,'set_elements(', 'Any[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny[]'),
+  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny'),
   \ javaapi#method(0,1,'set_elements_as_dyn_any(', 'DynAny[]) throws TypeMismatch, InvalidValue', 'void'),
   \ javaapi#method(0,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(0,1,'assign(', 'DynAny) throws TypeMismatch', 'void'),
@@ -479,7 +479,7 @@ call javaapi#class('_DynArrayStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynEnumStub', 'ObjectImpl', [
@@ -539,7 +539,7 @@ call javaapi#class('_DynEnumStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynFixedStub', 'ObjectImpl', [
@@ -597,7 +597,7 @@ call javaapi#class('_DynFixedStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynSequenceStub', 'ObjectImpl', [
@@ -605,9 +605,9 @@ call javaapi#class('_DynSequenceStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'_DynSequenceStub(', ')', ''),
   \ javaapi#method(0,1,'get_length(', ')', 'int'),
   \ javaapi#method(0,1,'set_length(', 'int) throws InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_elements(', ')', 'Any[]'),
+  \ javaapi#method(0,1,'get_elements(', ')', 'Any'),
   \ javaapi#method(0,1,'set_elements(', 'Any[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny[]'),
+  \ javaapi#method(0,1,'get_elements_as_dyn_any(', ')', 'DynAny'),
   \ javaapi#method(0,1,'set_elements_as_dyn_any(', 'DynAny[]) throws TypeMismatch, InvalidValue', 'void'),
   \ javaapi#method(0,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(0,1,'assign(', 'DynAny) throws TypeMismatch', 'void'),
@@ -659,7 +659,7 @@ call javaapi#class('_DynSequenceStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynStructStub', 'ObjectImpl', [
@@ -667,9 +667,9 @@ call javaapi#class('_DynStructStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'_DynStructStub(', ')', ''),
   \ javaapi#method(0,1,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
   \ javaapi#method(0,1,'current_member_kind(', ') throws TypeMismatch, InvalidValue', 'TCKind'),
-  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair[]'),
+  \ javaapi#method(0,1,'get_members(', ')', 'NameValuePair'),
   \ javaapi#method(0,1,'set_members(', 'NameValuePair[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_members_as_dyn_any(', ')', 'NameDynAnyPair[]'),
+  \ javaapi#method(0,1,'get_members_as_dyn_any(', ')', 'NameDynAnyPair'),
   \ javaapi#method(0,1,'set_members_as_dyn_any(', 'NameDynAnyPair[]) throws TypeMismatch, InvalidValue', 'void'),
   \ javaapi#method(0,1,'type(', ')', 'TypeCode'),
   \ javaapi#method(0,1,'assign(', 'DynAny) throws TypeMismatch', 'void'),
@@ -721,7 +721,7 @@ call javaapi#class('_DynStructStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynUnionStub', 'ObjectImpl', [
@@ -786,7 +786,7 @@ call javaapi#class('_DynUnionStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
 call javaapi#class('_DynValueStub', 'ObjectImpl', [
@@ -794,9 +794,9 @@ call javaapi#class('_DynValueStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'_DynValueStub(', ')', ''),
   \ javaapi#method(0,1,'current_member_name(', ') throws TypeMismatch, InvalidValue', 'String'),
   \ javaapi#method(0,1,'current_member_kind(', ') throws TypeMismatch, InvalidValue', 'TCKind'),
-  \ javaapi#method(0,1,'get_members(', ') throws InvalidValue', 'NameValuePair[]'),
+  \ javaapi#method(0,1,'get_members(', ') throws InvalidValue', 'NameValuePair'),
   \ javaapi#method(0,1,'set_members(', 'NameValuePair[]) throws TypeMismatch, InvalidValue', 'void'),
-  \ javaapi#method(0,1,'get_members_as_dyn_any(', ') throws InvalidValue', 'NameDynAnyPair[]'),
+  \ javaapi#method(0,1,'get_members_as_dyn_any(', ') throws InvalidValue', 'NameDynAnyPair'),
   \ javaapi#method(0,1,'set_members_as_dyn_any(', 'NameDynAnyPair[]) throws TypeMismatch, InvalidValue', 'void'),
   \ javaapi#method(0,1,'is_null(', ')', 'boolean'),
   \ javaapi#method(0,1,'set_to_null(', ')', 'void'),
@@ -851,6 +851,6 @@ call javaapi#class('_DynValueStub', 'ObjectImpl', [
   \ javaapi#method(0,1,'next(', ')', 'boolean'),
   \ javaapi#method(0,1,'component_count(', ')', 'int'),
   \ javaapi#method(0,1,'current_component(', ') throws TypeMismatch', 'DynAny'),
-  \ javaapi#method(0,1,'_ids(', ')', 'String[]'),
+  \ javaapi#method(0,1,'_ids(', ')', 'String'),
   \ ])
 
